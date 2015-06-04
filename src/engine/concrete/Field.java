@@ -38,14 +38,20 @@ public class Field {
 		StringBuilder sb = new StringBuilder();
 
 		for (int i = 0; i < elements.length; i++) {
+			sb.append("|");
 			for (int j = 0; j < elements[i].length; j++) {
 				if (elements[i][j] == null) {
 					sb.append(" ");
 				} else {
-					sb.append(elements[i][j].toString() + " ");
+					sb.append(elements[i][j].toString());
 				}
+				sb.append("|");
 			}
 			sb.append("\n");
+			for (int j = 0; j < elements[i].length; j++) {
+				sb.append("--");
+			}
+			sb.append("-\n");
 		}
 
 		return sb.toString();
