@@ -1,0 +1,19 @@
+Mountain Zone
+Characters:
+    Hero - Gun
+    Mountain evil - Machine Gun
+    Baronom - Blast
+    Icelander - Pickax
+    BigHook - Rope
+
+Weapons and tools:
+
+    Bombs - Pack of 3 bombs that destroy everything on current and surrounding cells (one level)
+    Blast - Destroys everything on current and surrounding cells (two levels)
+    Gun - Destroys player on current cell
+    Machine Gun - Fires continuously and destroys player on current cell
+    Rockets - Pack of 3 rockets that destroy only target on current and surrounding cells (one level)
+    Pickax
+    Rope
+    Karabiner
+    Armor
