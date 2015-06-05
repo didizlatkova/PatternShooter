@@ -1,5 +1,14 @@
 package visitor.concrete;
 
-public class Weapon {
+import visitor.abstracts.Item;
+import visitor.abstracts.Visitor;
+
+public class Weapon extends Item {
+
+	@Override
+	public void accept(Visitor visitor) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

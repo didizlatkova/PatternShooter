@@ -1,9 +1,13 @@
 package visitor.concrete;
 
-import visitor.abstracts.FieldElement;
-import visitor.abstracts.Visitor;
+import visitor.abstracts.*;
+import visitor.abstracts.Character;
 
-public abstract class Enemy implements FieldElement {
+public abstract class Enemy extends Character implements FieldElement {
+
+	public Enemy(Weapon weapon) {
+		super(weapon);
+	}
 
 	@Override
 	public void accept(Visitor visitor) {

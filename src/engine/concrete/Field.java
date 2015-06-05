@@ -4,13 +4,16 @@ import java.util.List;
 
 import factory.abstracts.ZoneFactory;
 import visitor.abstracts.FieldElement;
+import visitor.abstracts.Item;
 import visitor.concrete.*;
 
 public class Field {
 
 	private FieldElement[][] elements;
 	private List<Enemy> enemies;
+	private List<Item> items;
 	private Hero hero;
+	private RandomGenerator generator;
 
 	public FieldElement[][] getElements() {
 		return elements;
@@ -25,11 +28,19 @@ public class Field {
 		this.elements[height - 1][width - 1] = this.enemies.get(3);
 
 		this.elements[height / 2][width / 2] = this.hero;
+		
+		int[] freePosition = new int[2];		
+		for (int i = 0; i < this.items.size(); i++) {
+			freePosition = generator.getFreeFieldPosition(this.elements);
+			this.elements[freePosition[0]][freePosition[1]] = this.items.get(i);
+		}
 	}
 
 	public Field(int width, int height, ZoneFactory factory) {
+		this.generator = RandomGenerator.getInstance();
 		this.enemies = factory.createEnemies();
 		this.hero = factory.createHero();
+		this.items = factory.createItems();
 		this.setElements(height, width);
 	}
 
@@ -37,6 +48,11 @@ public class Field {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 
+		for (int j = 0; j < elements[0].length; j++) {
+			sb.append("--");
+		}
+		sb.append("-\n");
+		
 		for (int i = 0; i < elements.length; i++) {
 			sb.append("|");
 			for (int j = 0; j < elements[i].length; j++) {
