@@ -8,9 +8,9 @@ import visitor.concrete.*;
 public interface ZoneFactory {
 
 	List<Enemy> createEnemies();
-	
+
 	List<Item> createItems();
-		
+
 	Hero createHero();
-	
+
 }

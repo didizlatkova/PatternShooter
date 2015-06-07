@@ -5,8 +5,8 @@ import visitor.concrete.Tool;
 public class Armor extends Tool {
 
 	@Override
-	public String toString(){
+	public String toString() {
 		return "A";
 	}
-	
+
 }

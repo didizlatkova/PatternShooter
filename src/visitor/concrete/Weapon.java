@@ -8,7 +8,7 @@ public class Weapon extends Item {
 	@Override
 	public void accept(Visitor visitor) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

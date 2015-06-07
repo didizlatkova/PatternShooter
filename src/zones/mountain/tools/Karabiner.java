@@ -5,8 +5,8 @@ import visitor.concrete.Tool;
 public class Karabiner extends Tool {
 
 	@Override
-	public String toString(){
+	public String toString() {
 		return "K";
 	}
-	
+
 }

@@ -32,7 +32,7 @@ public class Hero extends Character {
 		Command command = CommandParser.getInstance().getCommand(input);
 		field.bindCommand(command, this);
 		command.execute();
-		
+
 		System.out.println(field.toString());
 		sc.close();
 	}

@@ -8,8 +8,8 @@ public class CommandParser {
 
 	private CommandParser() {
 	};
-	
-	public static CommandParser getInstance(){
+
+	public static CommandParser getInstance() {
 		return instance;
 	}
 

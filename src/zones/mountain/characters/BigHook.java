@@ -13,7 +13,7 @@ public class BigHook extends Enemy {
 	@Override
 	public void takeTurn(Field field) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

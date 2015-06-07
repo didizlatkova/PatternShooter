@@ -20,7 +20,7 @@ public class MountainFactory implements ZoneFactory {
 		enemies.add(new BigHook());
 		enemies.add(new Icelander());
 		enemies.add(new MountainEvil());
-		
+
 		return enemies;
 	}
 
@@ -30,7 +30,7 @@ public class MountainFactory implements ZoneFactory {
 		items.add(new MachineGun());
 		items.add(new Rocket());
 		items.add(new Karabiner());
-		
+
 		return items;
 	}
 

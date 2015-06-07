@@ -2,12 +2,9 @@ package engine.concrete;
 
 import java.util.List;
 
-import command.abstracts.Command;
-import command.abstracts.MoveCommand;
+import command.abstracts.*;
 import factory.abstracts.ZoneFactory;
-import visitor.abstracts.FieldElement;
-import visitor.abstracts.Item;
-import visitor.abstracts.Position;
+import visitor.abstracts.*;
 import visitor.concrete.*;
 import visitor.abstracts.Character;
 
@@ -22,12 +19,12 @@ public class Field {
 	public FieldElement[][] getElements() {
 		return this.elements;
 	}
-	
-	public List<Enemy> getEnemies() {		
+
+	public List<Enemy> getEnemies() {
 		return this.enemies;
 	}
-	
-	public Hero getHero(){
+
+	public Hero getHero() {
 		return this.hero;
 	}
 
@@ -37,17 +34,12 @@ public class Field {
 		this.enemies.get(0).setPosition(new Position(0, 0), elements);
 		this.enemies.get(1).setPosition(new Position(0, width - 1), elements);
 		this.enemies.get(2).setPosition(new Position(height - 1, 0), elements);
-		this.enemies.get(3).setPosition(new Position(height - 1, width - 1), elements);
-		
-		this.hero.setPosition(new Position(height / 2, width / 2), elements);
-		
-//		this.elements[0][width - 1] = this.enemies.get(1);
-//		this.elements[height - 1][0] = this.enemies.get(2);
-//		this.elements[height - 1][width - 1] = this.enemies.get(3);
+		this.enemies.get(3).setPosition(new Position(height - 1, width - 1),
+				elements);
 
-		//this.elements[height / 2][width / 2] = this.hero;
-		
-		int[] freePosition = new int[2];		
+		this.hero.setPosition(new Position(height / 2, width / 2), elements);
+
+		int[] freePosition = new int[2];
 		for (int i = 0; i < this.items.size(); i++) {
 			freePosition = generator.getFreeFieldPosition(this.elements);
 			this.elements[freePosition[0]][freePosition[1]] = this.items.get(i);
@@ -61,14 +53,13 @@ public class Field {
 		this.items = factory.createItems();
 		this.setElements(height, width);
 	}
-	
-	public void moveCharacter(Character character, Position newPosition){
+
+	public void moveCharacter(Character character, Position newPosition) {
 		this.elements[character.getPosition().x][character.getPosition().y] = null;
 		character.setPosition(newPosition, this.elements);
-	//	this.elements[character.getPosition().x][character.getPosition().y] = (FieldElement) character;
 	}
-	
-	public void bindCommand(Command command, Character character){
+
+	public void bindCommand(Command command, Character character) {
 		if (command instanceof MoveCommand) {
 			((MoveCommand) command).setField(this);
 			((MoveCommand) command).setCharacter(character);
@@ -83,7 +74,7 @@ public class Field {
 			sb.append("--");
 		}
 		sb.append("-\n");
-		
+
 		for (int i = 0; i < elements.length; i++) {
 			sb.append("|");
 			for (int j = 0; j < elements[i].length; j++) {
