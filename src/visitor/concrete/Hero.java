@@ -1,9 +1,14 @@
 package visitor.concrete;
 
+import java.util.Scanner;
+
+import command.abstracts.Command;
+import command.concrete.CommandParser;
+import engine.concrete.Field;
 import visitor.abstracts.*;
 import visitor.abstracts.Character;
 
-public class Hero extends Character implements FieldElement {
+public class Hero extends Character {
 
 	public Hero(Weapon weapon) {
 		super(weapon);
@@ -18,6 +23,18 @@ public class Hero extends Character implements FieldElement {
 	@Override
 	public String toString() {
 		return "H";
+	}
+
+	@Override
+	public void takeTurn(Field field) {
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
+		Command command = CommandParser.getInstance().getCommand(input);
+		field.bindCommand(command, this);
+		command.execute();
+		
+		System.out.println(field.toString());
+		sc.close();
 	}
 
 }

@@ -2,10 +2,14 @@ package engine.concrete;
 
 import java.util.List;
 
+import command.abstracts.Command;
+import command.abstracts.MoveCommand;
 import factory.abstracts.ZoneFactory;
 import visitor.abstracts.FieldElement;
 import visitor.abstracts.Item;
+import visitor.abstracts.Position;
 import visitor.concrete.*;
+import visitor.abstracts.Character;
 
 public class Field {
 
@@ -16,18 +20,32 @@ public class Field {
 	private RandomGenerator generator;
 
 	public FieldElement[][] getElements() {
-		return elements;
+		return this.elements;
+	}
+	
+	public List<Enemy> getEnemies() {		
+		return this.enemies;
+	}
+	
+	public Hero getHero(){
+		return this.hero;
 	}
 
 	private void setElements(int height, int width) {
 		this.elements = new FieldElement[height][width];
 
-		this.elements[0][0] = this.enemies.get(0);
-		this.elements[0][width - 1] = this.enemies.get(1);
-		this.elements[height - 1][0] = this.enemies.get(2);
-		this.elements[height - 1][width - 1] = this.enemies.get(3);
+		this.enemies.get(0).setPosition(new Position(0, 0), elements);
+		this.enemies.get(1).setPosition(new Position(0, width - 1), elements);
+		this.enemies.get(2).setPosition(new Position(height - 1, 0), elements);
+		this.enemies.get(3).setPosition(new Position(height - 1, width - 1), elements);
+		
+		this.hero.setPosition(new Position(height / 2, width / 2), elements);
+		
+//		this.elements[0][width - 1] = this.enemies.get(1);
+//		this.elements[height - 1][0] = this.enemies.get(2);
+//		this.elements[height - 1][width - 1] = this.enemies.get(3);
 
-		this.elements[height / 2][width / 2] = this.hero;
+		//this.elements[height / 2][width / 2] = this.hero;
 		
 		int[] freePosition = new int[2];		
 		for (int i = 0; i < this.items.size(); i++) {
@@ -42,6 +60,19 @@ public class Field {
 		this.hero = factory.createHero();
 		this.items = factory.createItems();
 		this.setElements(height, width);
+	}
+	
+	public void moveCharacter(Character character, Position newPosition){
+		this.elements[character.getPosition().x][character.getPosition().y] = null;
+		character.setPosition(newPosition, this.elements);
+	//	this.elements[character.getPosition().x][character.getPosition().y] = (FieldElement) character;
+	}
+	
+	public void bindCommand(Command command, Character character){
+		if (command instanceof MoveCommand) {
+			((MoveCommand) command).setField(this);
+			((MoveCommand) command).setCharacter(character);
+		}
 	}
 
 	@Override

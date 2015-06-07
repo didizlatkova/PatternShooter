@@ -3,7 +3,7 @@ package visitor.concrete;
 import visitor.abstracts.*;
 import visitor.abstracts.Character;
 
-public abstract class Enemy extends Character implements FieldElement {
+public abstract class Enemy extends Character {
 
 	public Enemy(Weapon weapon) {
 		super(weapon);

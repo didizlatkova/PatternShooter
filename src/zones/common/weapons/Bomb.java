@@ -4,4 +4,9 @@ import visitor.concrete.Weapon;
 
 public class Bomb extends Weapon {
 
+	@Override
+	public String toString(){
+		return "B";
+	}
+	
 }
