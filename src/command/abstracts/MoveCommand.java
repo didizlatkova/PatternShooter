@@ -14,16 +14,17 @@ public abstract class MoveCommand implements Command {
 	public void setField(Field field) {
 		this.field = field;
 	}
-	
+
 	public void setCharacter(Character character) {
 		this.character = character;
 	}
-	
+
 	public void setCurrentPosition(Position position) {
 		this.currentPosition = position;
 	}
 
 	@Override
+	// Template method
 	public void execute() {
 		this.setCurrentPosition(this.character.getPosition());
 		this.checkFieldBorders();
@@ -35,7 +36,7 @@ public abstract class MoveCommand implements Command {
 	public abstract void checkFieldBorders();
 
 	public abstract void setNewPosition();
-	
+
 	protected abstract String getName();
 
 	public void checkNeighborCharacter() {
@@ -47,6 +48,6 @@ public abstract class MoveCommand implements Command {
 
 	public void moveCharacter() {
 		this.field.moveCharacter(this.character, newPosition);
-	}		
+	}
 
 }
