@@ -8,7 +8,7 @@ public class RightCommand extends MoveCommand {
 	@Override
 	public void checkFieldBorders() {
 		if (this.currentPosition.y == this.field.getElements()[0].length - 1) {
-			throw new IllegalStateException("Cannot move to the right!");
+			throw new IllegalStateException("Cannot move right!");
 		}
 	}
 

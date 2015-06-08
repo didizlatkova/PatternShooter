@@ -42,7 +42,7 @@ public abstract class MoveCommand implements Command {
 	public void checkNeighborCharacter() {
 		if (this.field.getElements()[newPosition.x][newPosition.y] instanceof Character) {
 			throw new IllegalStateException(String.format(
-					"Cannot move to the %s!", this.getName()));
+					"Cannot move %s!", this.getName()));
 		}
 	}
 

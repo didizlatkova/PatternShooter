@@ -16,10 +16,13 @@ public class CommandParser {
 	public Command getCommand(String command) {
 		switch (command) {
 		case "left":
-			return new LeftCommand();
-			
+			return new LeftCommand();			
 		case "right":
 			return new RightCommand();
+		case "up":
+			return new UpCommand();
+		case "down":
+			return new DownCommand();
 
 		default:
 			throw new IllegalStateException("Invalid command!");
