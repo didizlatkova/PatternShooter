@@ -10,13 +10,12 @@ public class Engine {
 		Field field = new Field(5, 5, factory);
 		System.out.println(field.toString());
 
-		
-			try {
-				field.getHero().takeTurn(field);
-			} catch (Exception e) {
-				System.out.println(e.getMessage());
-			}
-		
+		try {
+			field.getHero().takeTurn(field);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 }
