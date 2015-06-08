@@ -25,16 +25,10 @@ public class Hero extends Character {
 
 	@Override
 	public void takeTurn(Field field) {
-		for (int i = 0; i < 5; i++) {
-			String input = CommandParser.getInstance().getScanner().nextLine();
-			Command command = CommandParser.getInstance().getCommand(input);
-			field.bindCommand(command, this);
-			command.execute();
-
-			System.out.println(field.toString());			
-		}
-		
-		CommandParser.getInstance().close();	
+		String input = CommandParser.getInstance().getScanner().nextLine();
+		Command command = CommandParser.getInstance().getCommand(input);
+		field.bindCommand(command, this);
+		command.execute();
 	}
 
 }
