@@ -17,6 +17,9 @@ public class CommandParser {
 		switch (command) {
 		case "left":
 			return new LeftCommand();
+			
+		case "right":
+			return new RightCommand();
 
 		default:
 			throw new IllegalStateException("Invalid command!");
