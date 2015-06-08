@@ -8,8 +8,8 @@ import visitor.abstracts.Character;
 
 public class Hero extends Character {
 
-	public Hero(Weapon weapon) {
-		super(weapon);
+	public Hero(Weapon weapon, int healthPoints) {
+		super(weapon, healthPoints);
 	}
 
 	@Override

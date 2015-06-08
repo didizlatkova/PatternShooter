@@ -5,8 +5,8 @@ import zones.common.weapons.Blast;
 
 public class Baronom extends Enemy {
 
-	public Baronom() {
-		super(new Blast());
+	public Baronom(int healthPoints) {
+		super(new Blast(), healthPoints);
 	}	
 
 }

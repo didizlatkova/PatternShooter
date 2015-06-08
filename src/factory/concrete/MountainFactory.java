@@ -12,14 +12,16 @@ import zones.mountain.weapons.*;
 import factory.abstracts.ZoneFactory;
 
 public class MountainFactory implements ZoneFactory {
+	
+	private static final int HEALTH_POINTS = 100;
 
 	@Override
 	public List<Enemy> createEnemies() {
 		ArrayList<Enemy> enemies = new ArrayList<Enemy>();
-		enemies.add(new Baronom());
-		enemies.add(new BigHook());
-		enemies.add(new Icelander());
-		enemies.add(new MountainEvil());
+		enemies.add(new Baronom(HEALTH_POINTS));
+		enemies.add(new BigHook(HEALTH_POINTS));
+		enemies.add(new Icelander(HEALTH_POINTS));
+		enemies.add(new MountainEvil(HEALTH_POINTS));
 
 		return enemies;
 	}
@@ -36,7 +38,7 @@ public class MountainFactory implements ZoneFactory {
 
 	@Override
 	public Hero createHero() {
-		return new Hero(new Gun());
+		return new Hero(new Gun(), HEALTH_POINTS);
 	}
 
 }

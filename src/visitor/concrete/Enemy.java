@@ -12,8 +12,8 @@ import visitor.abstracts.Character;
 
 public abstract class Enemy extends Character {
 
-	public Enemy(Weapon weapon) {
-		super(weapon);
+	public Enemy(Weapon weapon, int healthPoints) {
+		super(weapon, healthPoints);
 	}
 
 	@Override

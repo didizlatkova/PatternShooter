@@ -5,8 +5,8 @@ import zones.mountain.weapons.Pickax;
 
 public class Icelander extends Enemy {
 
-	public Icelander() {
-		super(new Pickax());
+	public Icelander(int healthPoints) {
+		super(new Pickax(), healthPoints);
 	}
 
 }

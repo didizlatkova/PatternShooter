@@ -5,8 +5,8 @@ import zones.common.weapons.Bomb;
 
 public class MountainEvil extends Enemy {
 
-	public MountainEvil() {
-		super(new Bomb());
+	public MountainEvil(int healthPoints) {
+		super(new Bomb(), healthPoints);
 	}
 	
 }

@@ -5,8 +5,8 @@ import zones.mountain.weapons.Rope;
 
 public class BigHook extends Enemy {
 
-	public BigHook() {
-		super(new Rope());
+	public BigHook(int healthPoints) {
+		super(new Rope(), healthPoints);
 	}
 
 }
