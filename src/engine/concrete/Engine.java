@@ -1,5 +1,6 @@
 package engine.concrete;
 
+import visitor.concrete.Enemy;
 import factory.abstracts.ZoneFactory;
 import factory.concrete.MountainFactory;
 
@@ -10,12 +11,11 @@ public class Engine {
 		Field field = new Field(5, 5, factory);
 		System.out.println(field.toString());
 
-		try {
-			field.getHero().takeTurn(field);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
+		for (Enemy enemy : field.getEnemies()) {
+			enemy.takeTurn(field);
 		}
 
+		System.out.println(field.toString());
 	}
 
 }

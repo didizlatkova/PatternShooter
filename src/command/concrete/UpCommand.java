@@ -6,10 +6,12 @@ import command.abstracts.MoveCommand;
 public class UpCommand extends MoveCommand {
 
 	@Override
-	public void checkFieldBorders() {
+	public boolean outsideFieldBorders() {
 		if (this.currentPosition.x == 0) {
-			throw new IllegalStateException("Cannot move up!");
+			return true;
 		}
+		
+		return false;
 	}
 
 	@Override
@@ -18,7 +20,7 @@ public class UpCommand extends MoveCommand {
 	}
 
 	@Override
-	protected String getName() {
+	public String getName() {
 		return "up";
 	}
 }

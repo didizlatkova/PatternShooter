@@ -6,10 +6,12 @@ import command.abstracts.MoveCommand;
 public class RightCommand extends MoveCommand {
 
 	@Override
-	public void checkFieldBorders() {
+	public boolean outsideFieldBorders() {
 		if (this.currentPosition.y == this.field.getElements()[0].length - 1) {
-			throw new IllegalStateException("Cannot move right!");
+			return true;
 		}
+		
+		return false;
 	}
 
 	@Override
@@ -19,7 +21,7 @@ public class RightCommand extends MoveCommand {
 	}
 
 	@Override
-	protected String getName() {
+	public String getName() {
 		return "right";
 	}
 }

@@ -17,33 +17,38 @@ public abstract class MoveCommand implements Command {
 
 	public void setCharacter(Character character) {
 		this.character = character;
-	}
-
-	public void setCurrentPosition(Position position) {
-		this.currentPosition = position;
+		this.currentPosition = character.getPosition();
 	}
 
 	@Override
 	// Template method
 	public void execute() {
-		this.setCurrentPosition(this.character.getPosition());
-		this.checkFieldBorders();
 		this.setNewPosition();
-		this.checkNeighborCharacter();
+		if (!isMovePossible()) {
+			System.out
+					.println(String.format("Cannot move %s!", this.getName()));
+			return;
+		}
 		this.moveCharacter();
 	}
 
-	public abstract void checkFieldBorders();
+	public boolean isMovePossible() {
+		return !this.outsideFieldBorders()
+				&& !this.clashesWithNeighborCharacter();
+	}
+
+	public abstract boolean outsideFieldBorders();
 
 	public abstract void setNewPosition();
 
-	protected abstract String getName();
+	public abstract String getName();
 
-	public void checkNeighborCharacter() {
+	public boolean clashesWithNeighborCharacter() {
 		if (this.field.getElements()[newPosition.x][newPosition.y] instanceof Character) {
-			throw new IllegalStateException(String.format(
-					"Cannot move %s!", this.getName()));
+			return true;
 		}
+
+		return false;
 	}
 
 	public void moveCharacter() {
