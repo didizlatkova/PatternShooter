@@ -3,6 +3,7 @@ package engine.concrete;
 import java.util.List;
 
 import command.abstracts.*;
+import command.concrete.AttackCommand;
 import elements.abstracts.*;
 import elements.abstracts.Character;
 import elements.concrete.*;
@@ -63,7 +64,22 @@ public class Field {
 		if (command instanceof MoveCommand) {
 			((MoveCommand) command).setField(this);
 			((MoveCommand) command).setCharacter(character);
+		} else if (command instanceof AttackCommand) {
+			((AttackCommand) command).setField(this);
+			((AttackCommand) command).setCharacter(character);
 		}
+	}
+
+	public boolean isInside(Position position) {
+		if (position.x < 0 || position.x >= this.elements.length) {
+			return false;
+		}
+
+		if (position.y < 0 || position.y >= this.elements[0].length) {
+			return false;
+		}
+
+		return true;
 	}
 
 	@Override

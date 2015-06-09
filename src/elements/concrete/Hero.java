@@ -56,13 +56,12 @@ public class Hero extends Character {
 				.println(String
 						.format("Congratulations! You just found a(n) %s. It was added to your weapons!",
 								weapon.getName()));
-
 	}
 
 	@Override
 	public void visit(Character character) {
-		// TODO Auto-generated method stub
-
+		System.out.println(String.format("Attacking %s with %s!",
+				character.getName(), this.getWeapon().getName()));
 	}
 
 	@Override
