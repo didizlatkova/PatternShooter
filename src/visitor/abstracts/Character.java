@@ -1,19 +1,13 @@
 package visitor.abstracts;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import engine.concrete.Field;
-import visitor.concrete.Tool;
 import visitor.concrete.Weapon;
 
 public abstract class Character implements FieldElement, Visitor {
 
 	private Position position;
 	private Weapon weapon;	
-	private int healthPoints;
-	
-	public List<Tool> toolbox;
+	private int healthPoints;	
 
 	public Position getPosition() {
 		return position;
@@ -42,15 +36,9 @@ public abstract class Character implements FieldElement, Visitor {
 
 	public Character(Weapon weapon, int healthPoints) {
 		this.setWeapon(weapon);
-		this.setHealthPoints(healthPoints);
-		this.toolbox = new ArrayList<Tool>();
+		this.setHealthPoints(healthPoints);		
 	}
 
 	public abstract void takeTurn(Field field);
 	
-	@Override
-	public void visit(Tool tool) {
-		this.toolbox.add(tool);		
-	}
-
 }

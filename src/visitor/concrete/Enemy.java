@@ -49,6 +49,23 @@ public abstract class Enemy extends Character {
 		
 		return possibleMoves;
 	}
+	
+	@Override
+	public void visit(Tool tool) {
+		// do nothing since enemies cannot use tools
+	}
+	
+	@Override
+	public void visit(Weapon weapon) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void visit(Character character) {
+		// TODO Auto-generated method stub
+		
+	}
 
 	@Override
 	public String toString() {

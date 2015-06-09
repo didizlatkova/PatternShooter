@@ -12,11 +12,14 @@ import visitor.abstracts.Character;
 public class Hero extends Character {
 
 	private List<Weapon> weapons;
+
+	public List<Tool> toolbox;
 	
 	public Hero(Weapon weapon, int healthPoints) {
 		super(weapon, healthPoints);
 		this.weapons = new ArrayList<Weapon>();
 		this.weapons.add(weapon);
+		this.toolbox = new ArrayList<Tool>();
 	}
 
 	@Override
@@ -40,7 +43,7 @@ public class Hero extends Character {
 
 	@Override
 	public void visit(Tool tool) {
-		super.visit(tool);
+		this.toolbox.add(tool);	
 		System.out.println("Congratulations! You just found a %s. It was added to your toolbox!");
 	}
 
