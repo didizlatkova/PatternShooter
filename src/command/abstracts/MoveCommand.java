@@ -51,12 +51,6 @@ public abstract class MoveCommand implements Command {
 
 	}
 
-	public abstract boolean outsideFieldBorders();
-
-	public abstract void setNewPosition();
-
-	public abstract String getName();
-
 	public boolean clashesWithTool() {
 		if (this.field.getElements()[newPosition.x][newPosition.y] instanceof Tool) {
 			return true;
@@ -76,5 +70,11 @@ public abstract class MoveCommand implements Command {
 	public void moveCharacter() {
 		this.field.moveCharacter(this.character, newPosition);
 	}
+
+	public abstract boolean outsideFieldBorders();
+
+	public abstract void setNewPosition();
+
+	public abstract String getName();
 
 }

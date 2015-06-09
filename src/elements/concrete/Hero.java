@@ -11,7 +11,7 @@ import elements.abstracts.*;
 import engine.concrete.Field;
 
 public class Hero extends HeroVisitor {
-	
+
 	public Hero(Weapon weapon, int healthPoints) {
 		super(weapon, healthPoints);
 		this.weapons = new ArrayList<Weapon>();
@@ -19,9 +19,8 @@ public class Hero extends HeroVisitor {
 		this.toolbox = new ArrayList<Tool>();
 	}
 
-	@Override
-	public String toString() {
-		return "H";
+	protected AttackStrategy getStrategy() {
+		return new HeroAttackStrategy(this);
 	}
 
 	@Override
@@ -31,14 +30,15 @@ public class Hero extends HeroVisitor {
 		this.bindCommand(command, field);
 		command.execute();
 	}
-	
-	protected AttackStrategy getStrategy(){
-		return new HeroAttackStrategy(this);
-	}
 
 	@Override
 	public String getName() {
 		return "You";
+	}
+
+	@Override
+	public String toString() {
+		return "H";
 	}
 
 }

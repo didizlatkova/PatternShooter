@@ -22,10 +22,10 @@ public abstract class EnemyVisitor extends Character {
 	}
 
 	@Override
-	public void visit(Weapon weapon) {		
+	public void visit(Weapon weapon) {
 		System.out.println(String.format("%s just found a(n) %s.",
 				this.getName(), weapon.getName()));
-		
+
 		if (weapon.DAMAGE_POINTS > this.getWeapon().DAMAGE_POINTS) {
 			this.setWeapon(weapon);
 		}

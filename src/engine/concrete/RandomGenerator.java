@@ -34,4 +34,5 @@ public class RandomGenerator {
 		int index = rnd.nextInt(possibleCommands.size());
 		return possibleCommands.get(index);
 	}
+	
 }

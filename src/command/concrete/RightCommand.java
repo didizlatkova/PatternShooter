@@ -10,7 +10,7 @@ public class RightCommand extends MoveCommand {
 		if (this.currentPosition.y == this.field.getElements()[0].length - 1) {
 			return true;
 		}
-		
+
 		return false;
 	}
 

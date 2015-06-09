@@ -10,13 +10,14 @@ public class UpCommand extends MoveCommand {
 		if (this.currentPosition.x == 0) {
 			return true;
 		}
-		
+
 		return false;
 	}
 
 	@Override
 	public void setNewPosition() {
-		this.newPosition = new Position(currentPosition.x - 1, currentPosition.y);
+		this.newPosition = new Position(currentPosition.x - 1,
+				currentPosition.y);
 	}
 
 	@Override

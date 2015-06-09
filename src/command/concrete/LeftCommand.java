@@ -10,13 +10,14 @@ public class LeftCommand extends MoveCommand {
 		if (this.currentPosition.y == 0) {
 			return true;
 		}
-		
+
 		return false;
 	}
 
 	@Override
 	public void setNewPosition() {
-		this.newPosition = new Position(currentPosition.x, currentPosition.y - 1);
+		this.newPosition = new Position(currentPosition.x,
+				currentPosition.y - 1);
 	}
 
 	@Override

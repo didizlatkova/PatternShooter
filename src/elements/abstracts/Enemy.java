@@ -16,22 +16,6 @@ public abstract class Enemy extends EnemyVisitor {
 		super(weapon, healthPoints);
 	}
 
-	@Override
-	public void takeTurn(Field field) {
-//		if (field.isHeroInReach(this.getPosition())) {
-//			AttackCommand command = new AttackCommand();
-//			this.bindCommand(command, field);
-//			command.execute();
-//		} else {
-			List<MoveCommand> possibleMoves = this.getPossibleMoves(field);
-			if (possibleMoves.isEmpty()) {
-				return;
-			}
-
-			RandomGenerator.getInstance().getCommand(possibleMoves).execute();
-		//}
-	}
-
 	private List<MoveCommand> getPossibleMoves(Field field) {
 		List<MoveCommand> commands = new ArrayList<MoveCommand>();
 		commands.add(new LeftCommand());
@@ -52,9 +36,25 @@ public abstract class Enemy extends EnemyVisitor {
 
 		return possibleMoves;
 	}
-	
-	protected AttackStrategy getStrategy(){
+
+	protected AttackStrategy getStrategy() {
 		return null;
+	}
+
+	@Override
+	public void takeTurn(Field field) {
+		// if (field.isHeroInReach(this.getPosition())) {
+		// AttackCommand command = new AttackCommand();
+		// this.bindCommand(command, field);
+		// command.execute();
+		// } else {
+		List<MoveCommand> possibleMoves = this.getPossibleMoves(field);
+		if (possibleMoves.isEmpty()) {
+			return;
+		}
+
+		RandomGenerator.getInstance().getCommand(possibleMoves).execute();
+		// }
 	}
 
 	@Override

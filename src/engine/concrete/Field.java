@@ -57,7 +57,7 @@ public class Field {
 	public void moveCharacter(Character character, Position newPosition) {
 		this.elements[character.getPosition().x][character.getPosition().y] = null;
 		character.setPosition(newPosition, this.elements);
-	}	
+	}
 
 	public boolean isInside(Position position) {
 		if (position.x < 0 || position.x >= this.elements.length) {
