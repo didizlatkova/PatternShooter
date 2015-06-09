@@ -3,8 +3,6 @@ package engine.concrete;
 import java.util.ArrayList;
 import java.util.List;
 
-import command.abstracts.*;
-import command.concrete.AttackCommand;
 import elements.abstracts.*;
 import elements.abstracts.Character;
 import elements.concrete.*;
@@ -59,17 +57,7 @@ public class Field {
 	public void moveCharacter(Character character, Position newPosition) {
 		this.elements[character.getPosition().x][character.getPosition().y] = null;
 		character.setPosition(newPosition, this.elements);
-	}
-
-	public void bindCommand(Command command, Character character) {
-		if (command instanceof MoveCommand) {
-			((MoveCommand) command).setField(this);
-			((MoveCommand) command).setCharacter(character);
-		} else if (command instanceof AttackCommand) {
-			((AttackCommand) command).setField(this);
-			((AttackCommand) command).setCharacter(character);
-		}
-	}
+	}	
 
 	public boolean isInside(Position position) {
 		if (position.x < 0 || position.x >= this.elements.length) {

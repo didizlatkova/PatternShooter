@@ -1,5 +1,8 @@
 package elements.abstracts;
 
+import command.abstracts.*;
+import command.concrete.AttackCommand;
+import strategy.abstracts.AttackStrategy;
 import visitor.abstracts.Visitor;
 import engine.concrete.Field;
 
@@ -44,6 +47,19 @@ public abstract class Character implements FieldElement, Visitor {
 		this.setWeapon(weapon);
 		this.healthPoints = healthPoints;
 	}
+
+	public void bindCommand(Command command, Field field) {
+		if (command instanceof MoveCommand) {
+			((MoveCommand) command).setField(field);
+			((MoveCommand) command).setCharacter(this);
+		} else if (command instanceof AttackCommand) {
+			AttackStrategy strategy = this.getStrategy();
+			strategy.setField(field);
+			((AttackCommand) command).setStrategy(strategy);
+		}
+	}
+
+	protected abstract AttackStrategy getStrategy();
 
 	public abstract void takeTurn(Field field);
 

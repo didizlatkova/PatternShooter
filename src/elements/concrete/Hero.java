@@ -1,6 +1,9 @@
 package elements.concrete;
 
 import java.util.ArrayList;
+
+import strategy.abstracts.AttackStrategy;
+import strategy.concrete.HeroAttackStrategy;
 import visitor.concrete.HeroVisitor;
 import command.abstracts.Command;
 import command.concrete.CommandParser;
@@ -25,8 +28,12 @@ public class Hero extends HeroVisitor {
 	public void takeTurn(Field field) {
 		String input = CommandParser.getInstance().getScanner().nextLine();
 		Command command = CommandParser.getInstance().getCommand(input);
-		field.bindCommand(command, this);
+		this.bindCommand(command, field);
 		command.execute();
+	}
+	
+	protected AttackStrategy getStrategy(){
+		return new HeroAttackStrategy(this);
 	}
 
 	@Override
