@@ -3,6 +3,7 @@ package elements.abstracts;
 import java.util.ArrayList;
 import java.util.List;
 
+import visitor.abstracts.Visitor;
 import command.abstracts.MoveCommand;
 import command.concrete.*;
 import elements.abstracts.*;

@@ -1,5 +1,7 @@
 package elements.abstracts;
 
+import visitor.abstracts.Visitor;
+
 
 public abstract class Tool extends Item {
 
