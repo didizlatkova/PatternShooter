@@ -31,7 +31,7 @@ public class Hero extends HeroVisitor {
 
 	@Override
 	public String getName() {
-		return "Hero";
+		return "You";
 	}
 
 }

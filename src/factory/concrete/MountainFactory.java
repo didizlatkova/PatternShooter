@@ -14,7 +14,7 @@ import factory.abstracts.ZoneFactory;
 
 public class MountainFactory implements ZoneFactory {
 	
-	private static final int HEALTH_POINTS = 100;
+	private static final int HEALTH_POINTS = 40;
 
 	@Override
 	public List<Enemy> createEnemies() {

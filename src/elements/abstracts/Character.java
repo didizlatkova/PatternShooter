@@ -6,8 +6,8 @@ import engine.concrete.Field;
 public abstract class Character implements FieldElement, Visitor {
 
 	private Position position;
-	private Weapon weapon;	
-	private int healthPoints;	
+	private Weapon weapon;
+	private int healthPoints;
 
 	public Position getPosition() {
 		return position;
@@ -30,15 +30,21 @@ public abstract class Character implements FieldElement, Visitor {
 		return healthPoints;
 	}
 
-	public void setHealthPoints(int healthPoints) {
-		this.healthPoints = healthPoints;
+	public void takeAttack(int damagePoints) {
+		this.healthPoints -= damagePoints;
+		if (this.healthPoints < 0) {
+			this.healthPoints = 0;
+		}
+		System.out.println(String.format(
+				"%s got damaged by %d points. Health points left: %d",
+				this.getName(), damagePoints, this.healthPoints));
 	}
 
 	public Character(Weapon weapon, int healthPoints) {
 		this.setWeapon(weapon);
-		this.setHealthPoints(healthPoints);		
+		this.healthPoints = healthPoints;
 	}
 
 	public abstract void takeTurn(Field field);
-	
+
 }

@@ -32,6 +32,8 @@ public class Engine {
 			for (Enemy enemy : field.getEnemies()) {
 				enemy.takeTurn(field);
 			}
+			
+			field.removeDeadEnemies();
 
 			System.out.println(field.toString());
 		}

@@ -18,6 +18,9 @@ public abstract class Enemy extends EnemyVisitor {
 	@Override
 	public void takeTurn(Field field) {
 		List<MoveCommand> possibleMoves = this.getPossibleMoves(field);
+		if (possibleMoves.isEmpty()) {
+			return;
+		}
 
 		RandomGenerator.getInstance().getCommand(possibleMoves).execute();
 	}
@@ -42,7 +45,7 @@ public abstract class Enemy extends EnemyVisitor {
 
 		return possibleMoves;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "E";

@@ -1,5 +1,6 @@
 package engine.concrete;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import command.abstracts.*;
@@ -80,6 +81,28 @@ public class Field {
 		}
 
 		return true;
+	}
+
+	public void removeDeadEnemies() {
+		List<Enemy> enemiesToRemove = new ArrayList<Enemy>();
+		for (Enemy enemy : this.enemies) {
+			if (enemy.getHealthPoints() == 0) {
+				this.elements[enemy.getPosition().x][enemy.getPosition().y] = null;
+				enemiesToRemove.add(enemy);
+			}
+		}
+
+		for (Enemy enemy : enemiesToRemove) {
+			this.enemies.remove(enemy);
+		}
+
+		System.out.println("Enemies left: " + this.enemies.size());
+
+		if (this.enemies.isEmpty()) {
+			System.out.println("You win!");
+			Engine.getInstance().gameOver();
+		}
+
 	}
 
 	@Override
