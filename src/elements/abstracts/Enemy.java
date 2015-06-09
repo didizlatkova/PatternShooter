@@ -3,22 +3,16 @@ package elements.abstracts;
 import java.util.ArrayList;
 import java.util.List;
 
-import visitor.abstracts.Visitor;
+import visitor.concrete.EnemyVisitor;
 import command.abstracts.MoveCommand;
 import command.concrete.*;
-import elements.abstracts.*;
 import engine.concrete.Field;
 import engine.concrete.RandomGenerator;
 
-public abstract class Enemy extends Character {
+public abstract class Enemy extends EnemyVisitor {
 
 	public Enemy(Weapon weapon, int healthPoints) {
 		super(weapon, healthPoints);
-	}
-
-	@Override
-	public void accept(Visitor visitor) {
-		visitor.visit(this);
 	}
 
 	@Override
@@ -48,24 +42,7 @@ public abstract class Enemy extends Character {
 
 		return possibleMoves;
 	}
-
-	@Override
-	public void visit(Tool tool) {
-		// do nothing since enemies cannot use tools
-	}
-
-	@Override
-	public void visit(Weapon weapon) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void visit(Character character) {
-		// TODO Auto-generated method stub
-
-	}
-
+	
 	@Override
 	public String toString() {
 		return "E";
