@@ -83,6 +83,19 @@ public class Field {
 		return true;
 	}
 
+	public boolean isHeroInReach(Position position) {
+		for (int i = position.x - 1; i < position.x + 2; i++) {
+			for (int j = position.y - 1; j < position.y + 2; j++) {
+				Position heroPosition = new Position(i, j);
+				if (this.getElements()[heroPosition.x][heroPosition.y] instanceof Hero) {
+					return true;
+				}
+			}
+		}
+
+		return false;
+	}
+
 	public void removeDeadEnemies() {
 		List<Enemy> enemiesToRemove = new ArrayList<Enemy>();
 		for (Enemy enemy : this.enemies) {

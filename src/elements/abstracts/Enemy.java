@@ -17,12 +17,18 @@ public abstract class Enemy extends EnemyVisitor {
 
 	@Override
 	public void takeTurn(Field field) {
-		List<MoveCommand> possibleMoves = this.getPossibleMoves(field);
-		if (possibleMoves.isEmpty()) {
-			return;
-		}
+		if (field.isHeroInReach(this.getPosition())) {
+			AttackCommand command = new AttackCommand();
+			field.bindCommand(command, this);
+			command.execute();
+		} else {
+			List<MoveCommand> possibleMoves = this.getPossibleMoves(field);
+			if (possibleMoves.isEmpty()) {
+				return;
+			}
 
-		RandomGenerator.getInstance().getCommand(possibleMoves).execute();
+			RandomGenerator.getInstance().getCommand(possibleMoves).execute();
+		}
 	}
 
 	private List<MoveCommand> getPossibleMoves(Field field) {
