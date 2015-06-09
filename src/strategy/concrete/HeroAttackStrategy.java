@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import elements.abstracts.Character;
-import elements.abstracts.Enemy;
-import elements.abstracts.MultipleDamageWeapon;
-import elements.abstracts.Position;
+import elements.abstracts.*;
 import engine.concrete.Field;
 import strategy.abstracts.AttackStrategy;
 
@@ -16,13 +14,13 @@ public class HeroAttackStrategy implements AttackStrategy {
 	private Character character;
 	private Position currentPosition;
 
+	public void setField(Field field) {
+		this.field = field;
+	}
+
 	public HeroAttackStrategy(Character character) {
 		this.character = character;
 		this.currentPosition = character.getPosition();
-	}
-
-	public void setField(Field field) {
-		this.field = field;
 	}
 
 	private List<Enemy> getSurroundingEnemies() {
