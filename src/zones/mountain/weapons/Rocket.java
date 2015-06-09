@@ -1,8 +1,12 @@
 package zones.mountain.weapons;
 
-import elements.abstracts.Weapon;
+import elements.abstracts.MultipleDamageWeapon;
 
-public class Rocket extends Weapon {
+public class Rocket extends MultipleDamageWeapon {
+
+	public Rocket() {
+		super(10);
+	}
 
 	@Override
 	public String toString() {
