@@ -1,6 +1,6 @@
 package zones.common.weapons;
 
-import visitor.concrete.Weapon;
+import elements.abstracts.Weapon;
 
 public class Gun extends Weapon {
 

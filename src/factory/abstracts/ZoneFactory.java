@@ -2,8 +2,9 @@ package factory.abstracts;
 
 import java.util.List;
 
-import visitor.abstracts.Item;
-import visitor.concrete.*;
+import elements.abstracts.Enemy;
+import elements.abstracts.Item;
+import elements.concrete.*;
 
 public interface ZoneFactory {
 

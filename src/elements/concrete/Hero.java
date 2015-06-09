@@ -1,13 +1,13 @@
-package visitor.concrete;
+package elements.concrete;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import command.abstracts.Command;
 import command.concrete.CommandParser;
+import elements.abstracts.*;
+import elements.abstracts.Character;
 import engine.concrete.Field;
-import visitor.abstracts.*;
-import visitor.abstracts.Character;
 
 public class Hero extends Character {
 

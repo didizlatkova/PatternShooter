@@ -3,10 +3,10 @@ package engine.concrete;
 import java.util.List;
 
 import command.abstracts.*;
+import elements.abstracts.*;
+import elements.abstracts.Character;
+import elements.concrete.*;
 import factory.abstracts.ZoneFactory;
-import visitor.abstracts.*;
-import visitor.concrete.*;
-import visitor.abstracts.Character;
 
 public class Field {
 

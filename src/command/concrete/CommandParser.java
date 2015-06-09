@@ -26,6 +26,8 @@ public class CommandParser {
 			return new UpCommand();
 		case "down":
 			return new DownCommand();
+		case "attack":
+			return new AttackCommand();
 
 		default:
 			throw new IllegalStateException("Invalid command!");

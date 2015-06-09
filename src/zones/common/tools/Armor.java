@@ -1,6 +1,6 @@
 package zones.common.tools;
 
-import visitor.concrete.Tool;
+import elements.abstracts.Tool;
 
 public class Armor extends Tool {
 

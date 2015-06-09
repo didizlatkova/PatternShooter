@@ -1,9 +1,10 @@
 package command.abstracts;
 
-import visitor.abstracts.Character;
-import visitor.abstracts.FieldElement;
-import visitor.abstracts.Position;
-import visitor.concrete.*;
+import elements.abstracts.Character;
+import elements.abstracts.FieldElement;
+import elements.abstracts.Position;
+import elements.abstracts.Tool;
+import elements.concrete.*;
 import engine.concrete.Field;
 
 public abstract class MoveCommand implements Command {

@@ -1,4 +1,4 @@
-package visitor.abstracts;
+package elements.abstracts;
 
 public class Position {
 

@@ -1,7 +1,5 @@
-package visitor.concrete;
+package elements.abstracts;
 
-import visitor.abstracts.Item;
-import visitor.abstracts.Visitor;
 
 public abstract class Tool extends Item {
 

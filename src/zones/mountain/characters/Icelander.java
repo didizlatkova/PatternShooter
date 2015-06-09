@@ -1,6 +1,6 @@
 package zones.mountain.characters;
 
-import visitor.concrete.Enemy;
+import elements.abstracts.Enemy;
 import zones.mountain.weapons.Pickax;
 
 public class Icelander extends Enemy {

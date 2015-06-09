@@ -1,7 +1,5 @@
-package visitor.abstracts;
+package elements.abstracts;
 
-import visitor.concrete.Tool;
-import visitor.concrete.Weapon;
 
 public interface Visitor {
 

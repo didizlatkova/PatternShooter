@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import command.abstracts.MoveCommand;
-import visitor.abstracts.FieldElement;
+import elements.abstracts.FieldElement;
 
 public class RandomGenerator {
 

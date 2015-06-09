@@ -3,12 +3,13 @@ package factory.concrete;
 import java.util.ArrayList;
 import java.util.List;
 
-import visitor.abstracts.Item;
-import visitor.concrete.*;
 import zones.common.tools.Armor;
 import zones.common.weapons.*;
 import zones.mountain.characters.*;
 import zones.mountain.weapons.*;
+import elements.abstracts.Enemy;
+import elements.abstracts.Item;
+import elements.concrete.*;
 import factory.abstracts.ZoneFactory;
 
 public class MountainFactory implements ZoneFactory {

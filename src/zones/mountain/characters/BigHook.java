@@ -1,6 +1,6 @@
 package zones.mountain.characters;
 
-import visitor.concrete.Enemy;
+import elements.abstracts.Enemy;
 import zones.mountain.weapons.Rope;
 
 public class BigHook extends Enemy {

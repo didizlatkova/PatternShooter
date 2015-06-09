@@ -1,7 +1,7 @@
 package command.concrete;
 
-import visitor.abstracts.Position;
 import command.abstracts.MoveCommand;
+import elements.abstracts.Position;
 
 public class DownCommand extends MoveCommand {
 

@@ -1,8 +1,8 @@
 package zones.common.weapons;
 
-import visitor.concrete.Weapon;
+import elements.abstracts.MultipleDamageWeapon;
 
-public class Bomb extends Weapon {
+public class Bomb extends MultipleDamageWeapon {
 
 	@Override
 	public String toString() {

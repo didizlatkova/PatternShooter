@@ -1,7 +1,6 @@
-package visitor.abstracts;
+package elements.abstracts;
 
 import engine.concrete.Field;
-import visitor.concrete.Weapon;
 
 public abstract class Character implements FieldElement, Visitor {
 

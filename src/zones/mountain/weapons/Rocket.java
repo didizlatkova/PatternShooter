@@ -1,6 +1,6 @@
 package zones.mountain.weapons;
 
-import visitor.concrete.Weapon;
+import elements.abstracts.Weapon;
 
 public class Rocket extends Weapon {
 

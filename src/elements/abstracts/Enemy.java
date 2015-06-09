@@ -1,14 +1,13 @@
-package visitor.concrete;
+package elements.abstracts;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import command.abstracts.MoveCommand;
 import command.concrete.*;
+import elements.abstracts.*;
 import engine.concrete.Field;
 import engine.concrete.RandomGenerator;
-import visitor.abstracts.*;
-import visitor.abstracts.Character;
 
 public abstract class Enemy extends Character {
 

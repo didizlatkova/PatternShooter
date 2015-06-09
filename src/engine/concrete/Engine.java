@@ -1,8 +1,7 @@
 package engine.concrete;
 
 import command.concrete.CommandParser;
-
-import visitor.concrete.Enemy;
+import elements.abstracts.Enemy;
 import factory.abstracts.ZoneFactory;
 import factory.concrete.MountainFactory;
 
