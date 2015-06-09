@@ -14,7 +14,7 @@ public class Hero extends Character {
 	private List<Weapon> weapons;
 
 	public List<Tool> toolbox;
-	
+
 	public Hero(Weapon weapon, int healthPoints) {
 		super(weapon, healthPoints);
 		this.weapons = new ArrayList<Weapon>();
@@ -24,8 +24,7 @@ public class Hero extends Character {
 
 	@Override
 	public void accept(Visitor visitor) {
-		// TODO Auto-generated method stub
-
+		visitor.visit(this);
 	}
 
 	@Override
@@ -43,23 +42,29 @@ public class Hero extends Character {
 
 	@Override
 	public void visit(Tool tool) {
-		this.toolbox.add(tool);	
-		System.out.println("Congratulations! You just found a(n) %s. It was added to your toolbox!");
+		this.toolbox.add(tool);
+		System.out
+				.println(String
+						.format("Congratulations! You just found a(n) %s. It was added to your toolbox!",
+								tool.getName()));
 	}
 
 	@Override
 	public void visit(Weapon weapon) {
 		this.weapons.add(weapon);
-		System.out.println("Congratulations! You just found a(n) %s. It was added to your weapons!");
-		
+		System.out
+				.println(String
+						.format("Congratulations! You just found a(n) %s. It was added to your weapons!",
+								weapon.getName()));
+
 	}
 
 	@Override
 	public void visit(Character character) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 	@Override
 	public String getName() {
 		return "Hero";

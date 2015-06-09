@@ -1,6 +1,7 @@
 package command.abstracts;
 
 import visitor.abstracts.Character;
+import visitor.abstracts.FieldElement;
 import visitor.abstracts.Position;
 import visitor.concrete.*;
 import engine.concrete.Field;
@@ -25,12 +26,16 @@ public abstract class MoveCommand implements Command {
 	// Template method
 	public void execute() {
 		this.setNewPosition();
+		FieldElement visited = this.field.getElements()[this.newPosition.x][this.newPosition.y];
 		if (!isMovePossible()) {
 			System.out
 					.println(String.format("Cannot move %s!", this.getName()));
 			return;
 		}
 		this.moveCharacter();
+		if (visited != null) {
+			visited.accept(this.character);
+		}
 	}
 
 	public boolean isMovePossible() {
