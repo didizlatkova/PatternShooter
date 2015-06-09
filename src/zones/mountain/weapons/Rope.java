@@ -9,4 +9,9 @@ public class Rope extends Weapon {
 		return "Rp";
 	}
 
+	@Override
+	public String getName() {
+		return "Rope";
+	}
+	
 }

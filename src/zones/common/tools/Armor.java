@@ -9,4 +9,9 @@ public class Armor extends Tool {
 		return "A";
 	}
 
+	@Override
+	public String getName() {
+		return "Armor";
+	}
+	
 }

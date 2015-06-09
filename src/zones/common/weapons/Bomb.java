@@ -8,5 +8,10 @@ public class Bomb extends Weapon {
 	public String toString() {
 		return "B";
 	}
+	
+	@Override
+	public String getName() {
+		return "Bomb";
+	}
 
 }

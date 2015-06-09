@@ -8,5 +8,10 @@ public class Rocket extends Weapon {
 	public String toString() {
 		return "R";
 	}
+	
+	@Override
+	public String getName() {
+		return "Rocket";
+	}
 
 }

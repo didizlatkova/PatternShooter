@@ -7,6 +7,11 @@ public class Baronom extends Enemy {
 
 	public Baronom(int healthPoints) {
 		super(new Blast(), healthPoints);
+	}
+
+	@Override
+	public String getName() {
+		return "Baronom";
 	}	
 
 }

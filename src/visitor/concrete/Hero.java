@@ -44,12 +44,13 @@ public class Hero extends Character {
 	@Override
 	public void visit(Tool tool) {
 		this.toolbox.add(tool);	
-		System.out.println("Congratulations! You just found a %s. It was added to your toolbox!");
+		System.out.println("Congratulations! You just found a(n) %s. It was added to your toolbox!");
 	}
 
 	@Override
 	public void visit(Weapon weapon) {
-		// TODO Auto-generated method stub
+		this.weapons.add(weapon);
+		System.out.println("Congratulations! You just found a(n) %s. It was added to your weapons!");
 		
 	}
 
@@ -57,6 +58,11 @@ public class Hero extends Character {
 	public void visit(Character character) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	@Override
+	public String getName() {
+		return "Hero";
 	}
 
 }

@@ -21,11 +21,11 @@ public abstract class Enemy extends Character {
 		// TODO Auto-generated method stub
 
 	}
-	
+
 	@Override
 	public void takeTurn(Field field) {
 		List<MoveCommand> possibleMoves = this.getPossibleMoves(field);
-		
+
 		RandomGenerator.getInstance().getCommand(possibleMoves).execute();
 	}
 
@@ -35,36 +35,36 @@ public abstract class Enemy extends Character {
 		commands.add(new RightCommand());
 		commands.add(new UpCommand());
 		commands.add(new DownCommand());
-		
+
 		List<MoveCommand> possibleMoves = new ArrayList<MoveCommand>();
-		
+
 		for (MoveCommand moveCommand : commands) {
 			moveCommand.setField(field);
 			moveCommand.setCharacter(this);
 			moveCommand.setNewPosition();
-			if(moveCommand.isMovePossible()){
+			if (moveCommand.isMovePossible()) {
 				possibleMoves.add(moveCommand);
 			}
 		}
-		
+
 		return possibleMoves;
 	}
-	
+
 	@Override
 	public void visit(Tool tool) {
 		// do nothing since enemies cannot use tools
 	}
-	
+
 	@Override
 	public void visit(Weapon weapon) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void visit(Character character) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

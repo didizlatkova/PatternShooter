@@ -9,4 +9,9 @@ public class BigHook extends Enemy {
 		super(new Rope(), healthPoints);
 	}
 
+	@Override
+	public String getName() {
+		return "BigHook";
+	}
+	
 }

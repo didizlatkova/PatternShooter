@@ -9,4 +9,9 @@ public class Icelander extends Enemy {
 		super(new Pickax(), healthPoints);
 	}
 
+	@Override
+	public String getName() {
+		return "Icelander";
+	}
+	
 }

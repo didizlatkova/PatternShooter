@@ -8,5 +8,10 @@ public class Pickax extends Weapon {
 	public String toString() {
 		return "P";
 	}
+	
+	@Override
+	public String getName() {
+		return "Pickax";
+	}
 
 }

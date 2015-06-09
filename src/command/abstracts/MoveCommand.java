@@ -2,6 +2,7 @@ package command.abstracts;
 
 import visitor.abstracts.Character;
 import visitor.abstracts.Position;
+import visitor.concrete.*;
 import engine.concrete.Field;
 
 public abstract class MoveCommand implements Command {
@@ -33,8 +34,15 @@ public abstract class MoveCommand implements Command {
 	}
 
 	public boolean isMovePossible() {
+		if (this.character instanceof Hero) {
+			return !this.outsideFieldBorders()
+					&& !this.clashesWithNeighborCharacter();
+		}
+
 		return !this.outsideFieldBorders()
-				&& !this.clashesWithNeighborCharacter();
+				&& !this.clashesWithNeighborCharacter()
+				&& !this.clashesWithTool();
+
 	}
 
 	public abstract boolean outsideFieldBorders();
@@ -42,6 +50,14 @@ public abstract class MoveCommand implements Command {
 	public abstract void setNewPosition();
 
 	public abstract String getName();
+
+	public boolean clashesWithTool() {
+		if (this.field.getElements()[newPosition.x][newPosition.y] instanceof Tool) {
+			return true;
+		}
+
+		return false;
+	}
 
 	public boolean clashesWithNeighborCharacter() {
 		if (this.field.getElements()[newPosition.x][newPosition.y] instanceof Character) {

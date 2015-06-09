@@ -9,4 +9,9 @@ public class Karabiner extends Weapon {
 		return "K";
 	}
 
+	@Override
+	public String getName() {
+		return "Karabiner";
+	}
+	
 }

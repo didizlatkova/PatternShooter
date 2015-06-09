@@ -9,4 +9,9 @@ public class MachineGun extends Weapon {
 		return "M";
 	}
 
+	@Override
+	public String getName() {
+		return "MachineGun";
+	}
+	
 }

@@ -9,4 +9,9 @@ public class MountainEvil extends Enemy {
 		super(new Bomb(), healthPoints);
 	}
 	
+	@Override
+	public String getName() {
+		return "MountainEvil";
+	}
+	
 }

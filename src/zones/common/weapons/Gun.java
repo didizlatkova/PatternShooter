@@ -8,5 +8,10 @@ public class Gun extends Weapon {
 	public String toString() {
 		return "G";
 	}
+	
+	@Override
+	public String getName() {
+		return "Gun";
+	}
 
 }

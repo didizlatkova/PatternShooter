@@ -9,4 +9,9 @@ public class Blast extends Weapon {
 		return "Bl";
 	}
 
+	@Override
+	public String getName() {
+		return "Blast";
+	}
+	
 }
