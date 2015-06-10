@@ -28,12 +28,14 @@ public class Engine {
 
 		while (!gameOver) {
 			field.getHero().takeTurn(field);
+			field.removeDeadEnemies();
+			field.checkForWin();
 
 			for (Enemy enemy : field.getEnemies()) {
 				enemy.takeTurn(field);
 			}
-
-			field.removeDeadEnemies();
+			
+			field.checkForLoss();
 
 			System.out.println(field.toString());
 		}

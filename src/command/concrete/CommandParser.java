@@ -6,6 +6,9 @@ import command.abstracts.Command;
 
 public class CommandParser {
 
+	private final String WEAPON_KEY_WORD = "use ";
+	private final String EQUIPT_KEY_WORD = "equipt ";
+	
 	private static CommandParser instance = new CommandParser();
 	private static Scanner scanner = new Scanner(System.in);
 
@@ -17,6 +20,14 @@ public class CommandParser {
 	}
 
 	public Command getCommand(String command) {
+		if (command.startsWith(WEAPON_KEY_WORD)) {
+			return new ChangeWeaponCommand(command.substring(WEAPON_KEY_WORD.length()));
+		}
+
+		if (command.startsWith(EQUIPT_KEY_WORD)) {
+			return new EquiptCommand();
+		}
+		
 		switch (command) {
 		case "left":
 			return new LeftCommand();
@@ -30,7 +41,8 @@ public class CommandParser {
 			return new AttackCommand();
 
 		default:
-			throw new IllegalStateException("Invalid command!");
+			System.out.println("Invalid command!");
+			return null;
 		}
 	}
 
@@ -38,7 +50,7 @@ public class CommandParser {
 		return scanner;
 	}
 
-	public void close(){
+	public void close() {
 		scanner.close();
 	}
 }

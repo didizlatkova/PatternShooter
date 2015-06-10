@@ -1,9 +1,10 @@
 package elements.abstracts;
 
 import command.abstracts.*;
-import command.concrete.AttackCommand;
+import command.concrete.*;
 import strategy.abstracts.AttackStrategy;
 import visitor.abstracts.Visitor;
+import elements.concrete.Hero;
 import engine.concrete.Field;
 
 public abstract class Character implements FieldElement, Visitor {
@@ -56,6 +57,8 @@ public abstract class Character implements FieldElement, Visitor {
 			AttackStrategy strategy = this.getStrategy();
 			strategy.setField(field);
 			((AttackCommand) command).setStrategy(strategy);
+		} else if (command instanceof ChangeWeaponCommand) {
+			((ChangeWeaponCommand) command).setCharacter((Hero) this);
 		}
 	}
 

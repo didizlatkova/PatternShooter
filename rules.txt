@@ -1,3 +1,13 @@
+Allowed commands:
+left
+right
+up
+down
+
+attack
+equipt <tool>
+use <weapon>
+
 Mountain Zone
 Characters:
     Hero - Gun

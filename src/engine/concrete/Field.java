@@ -99,12 +99,16 @@ public class Field {
 		}
 
 		System.out.println("Enemies left: " + this.enemies.size());
+	}
 
+	public void checkForWin() {
 		if (this.enemies.isEmpty()) {
 			System.out.println("You win!");
 			Engine.getInstance().gameOver();
 		}
+	}
 
+	public void checkForLoss() {
 		if (this.hero.getHealthPoints() == 0) {
 			System.out.println("You lost!");
 			Engine.getInstance().gameOver();

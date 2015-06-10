@@ -27,8 +27,20 @@ public class Hero extends HeroVisitor {
 	public void takeTurn(Field field) {
 		String input = CommandParser.getInstance().getScanner().nextLine();
 		Command command = CommandParser.getInstance().getCommand(input);
-		this.bindCommand(command, field);
-		command.execute();
+		if (command != null) {
+			this.bindCommand(command, field);
+			command.execute();
+		}
+	}
+
+	public Weapon getWeaponByName(String name) {
+		for (Weapon weapon : weapons) {
+			if (weapon.getName().toLowerCase().equals(name.toLowerCase())) {
+				return weapon;
+			}
+		}
+
+		return null;
 	}
 
 	@Override
