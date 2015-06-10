@@ -37,6 +37,20 @@ public class Hero extends HeroVisitor {
 		}
 	}
 
+	@Override
+	// Chain of responsibility
+	public void takeAttack(Weapon weapon) {
+		if (!this.toolsInUse.isEmpty()) {
+			for (int i = 0; i < this.toolsInUse.size() - 1; i++) {
+				this.toolsInUse.get(i).nextHandler(this.toolsInUse.get(i + 1));
+			}
+
+			this.toolsInUse.get(0).takeAttack(weapon);
+		}
+
+		super.takeAttack(weapon);
+	}
+
 	public Item getItemByName(String name) {
 		for (Item item : toolbox) {
 			if (item.getName().toLowerCase().equals(name.toLowerCase())) {
@@ -50,6 +64,16 @@ public class Hero extends HeroVisitor {
 	public boolean isUsing(ToolType type) {
 		for (Tool tool : toolsInUse) {
 			if (tool.type.equals(type)) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public boolean isUsing(Tool tool) {
+		for (Tool usedTool : toolsInUse) {
+			if (usedTool.equals(tool)) {
 				return true;
 			}
 		}

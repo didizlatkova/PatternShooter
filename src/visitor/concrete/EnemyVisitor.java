@@ -35,7 +35,7 @@ public abstract class EnemyVisitor extends Character {
 	public void visit(Character character) {
 		System.out.println(String.format("%s is attacking you with %s!",
 				this.getName(), this.getWeapon().getName()));
-		character.takeAttack(this.getWeapon().DAMAGE_POINTS);
+		character.takeAttack(this.getWeapon());
 	}
 
 }

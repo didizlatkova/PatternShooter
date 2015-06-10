@@ -1,6 +1,7 @@
 package zones.common.tools;
 
 import elements.abstracts.Tool;
+import elements.abstracts.Weapon;
 import engine.helpers.ToolType;
 
 public class Armor extends Tool {
@@ -17,6 +18,11 @@ public class Armor extends Tool {
 	@Override
 	public String getName() {
 		return "Armor";
+	}
+
+	@Override
+	public void takeAttack(Weapon weapon) {
+		
 	}
 
 }

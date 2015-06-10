@@ -58,6 +58,10 @@ public abstract class Enemy extends EnemyVisitor {
 		}
 	}
 
+	public void takeAttack(Weapon weapon) {
+		super.takeAttack(weapon);
+	}
+
 	@Override
 	public String toString() {
 		return "E";

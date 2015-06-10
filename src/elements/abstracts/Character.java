@@ -11,7 +11,7 @@ public abstract class Character implements FieldElement, Visitor {
 
 	private Position position;
 	private Weapon weapon;
-	private int healthPoints;
+	protected int healthPoints;
 
 	public Position getPosition() {
 		return position;
@@ -39,14 +39,14 @@ public abstract class Character implements FieldElement, Visitor {
 		this.healthPoints = healthPoints;
 	}
 
-	public void takeAttack(int damagePoints) {
-		this.healthPoints -= damagePoints;
+	public void takeAttack(Weapon weapon) {
+		this.healthPoints -= weapon.DAMAGE_POINTS;
 		if (this.healthPoints < 0) {
 			this.healthPoints = 0;
 		}
 		System.out.println(String.format(
 				"%s got damaged by %d points. Health points left: %d",
-				this.getName(), damagePoints, this.healthPoints));
+				this.getName(), weapon.DAMAGE_POINTS, this.healthPoints));
 	}
 
 	public void bindCommand(Command command, Field field) {

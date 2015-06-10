@@ -10,8 +10,6 @@ import elements.abstracts.Weapon;
 
 public abstract class HeroVisitor extends Character {
 
-	//protected List<Weapon> weapons;
-
 	protected List<Item> toolbox;
 
 	public HeroVisitor(Weapon weapon, int healthPoints) {
@@ -45,7 +43,7 @@ public abstract class HeroVisitor extends Character {
 	public void visit(Character character) {
 		System.out.println(String.format("Attacking %s with %s!",
 				character.getName(), this.getWeapon().getName()));
-		character.takeAttack(this.getWeapon().DAMAGE_POINTS);
+		character.takeAttack(this.getWeapon());
 	}
 
 }
