@@ -9,7 +9,7 @@ import visitor.concrete.EnemyVisitor;
 import command.abstracts.MoveCommand;
 import command.concrete.*;
 import engine.concrete.Field;
-import engine.concrete.RandomGenerator;
+import engine.helpers.RandomGenerator;
 
 public abstract class Enemy extends EnemyVisitor {
 

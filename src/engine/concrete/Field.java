@@ -6,6 +6,7 @@ import java.util.List;
 import elements.abstracts.*;
 import elements.abstracts.Character;
 import elements.concrete.*;
+import engine.helpers.RandomGenerator;
 import factory.abstracts.ZoneFactory;
 
 public class Field {

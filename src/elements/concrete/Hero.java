@@ -1,6 +1,7 @@
 package elements.concrete;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import strategy.abstracts.AttackStrategy;
 import strategy.concrete.HeroAttackStrategy;
@@ -9,14 +10,17 @@ import command.abstracts.Command;
 import command.concrete.CommandParser;
 import elements.abstracts.*;
 import engine.concrete.Field;
+import engine.helpers.ToolType;
 
 public class Hero extends HeroVisitor {
 
+	public List<Tool> toolsInUse;
+
 	public Hero(Weapon weapon, int healthPoints) {
 		super(weapon, healthPoints);
-		this.weapons = new ArrayList<Weapon>();
-		this.weapons.add(weapon);
-		this.toolbox = new ArrayList<Tool>();
+		this.toolbox = new ArrayList<Item>();
+		this.toolbox.add(weapon);
+		this.toolsInUse = new ArrayList<Tool>();
 	}
 
 	protected AttackStrategy getStrategy() {
@@ -33,14 +37,24 @@ public class Hero extends HeroVisitor {
 		}
 	}
 
-	public Weapon getWeaponByName(String name) {
-		for (Weapon weapon : weapons) {
-			if (weapon.getName().toLowerCase().equals(name.toLowerCase())) {
-				return weapon;
+	public Item getItemByName(String name) {
+		for (Item item : toolbox) {
+			if (item.getName().toLowerCase().equals(name.toLowerCase())) {
+				return item;
 			}
 		}
 
 		return null;
+	}
+
+	public boolean isUsing(ToolType type) {
+		for (Tool tool : toolsInUse) {
+			if (tool.type.equals(type)) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	@Override

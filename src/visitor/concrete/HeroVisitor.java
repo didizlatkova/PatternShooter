@@ -4,14 +4,15 @@ import java.util.List;
 
 import visitor.abstracts.Visitor;
 import elements.abstracts.Character;
+import elements.abstracts.Item;
 import elements.abstracts.Tool;
 import elements.abstracts.Weapon;
 
 public abstract class HeroVisitor extends Character {
 
-	protected List<Weapon> weapons;
+	//protected List<Weapon> weapons;
 
-	protected List<Tool> toolbox;
+	protected List<Item> toolbox;
 
 	public HeroVisitor(Weapon weapon, int healthPoints) {
 		super(weapon, healthPoints);
@@ -33,7 +34,7 @@ public abstract class HeroVisitor extends Character {
 
 	@Override
 	public void visit(Weapon weapon) {
-		this.weapons.add(weapon);
+		this.toolbox.add(weapon);
 		System.out
 				.println(String
 						.format("Congratulations! You just found a(n) %s. It was added to your weapons!",

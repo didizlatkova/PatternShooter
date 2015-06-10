@@ -25,7 +25,7 @@ public class CommandParser {
 		}
 
 		if (command.startsWith(EQUIPT_KEY_WORD)) {
-			return new EquiptCommand();
+			return new EquiptCommand(command.substring(EQUIPT_KEY_WORD.length()));
 		}
 		
 		switch (command) {

@@ -59,6 +59,8 @@ public abstract class Character implements FieldElement, Visitor {
 			((AttackCommand) command).setStrategy(strategy);
 		} else if (command instanceof ChangeWeaponCommand) {
 			((ChangeWeaponCommand) command).setCharacter((Hero) this);
+		} else if (command instanceof EquiptCommand) {
+			((EquiptCommand) command).setCharacter((Hero) this);
 		}
 	}
 
