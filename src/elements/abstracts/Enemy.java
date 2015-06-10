@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import strategy.abstracts.AttackStrategy;
+import strategy.concrete.EnemyAttackStrategy;
 import visitor.concrete.EnemyVisitor;
 import command.abstracts.MoveCommand;
 import command.concrete.*;
@@ -38,23 +39,23 @@ public abstract class Enemy extends EnemyVisitor {
 	}
 
 	protected AttackStrategy getStrategy() {
-		return null;
+		return new EnemyAttackStrategy(this);
 	}
 
 	@Override
 	public void takeTurn(Field field) {
-		// if (field.isHeroInReach(this.getPosition())) {
-		// AttackCommand command = new AttackCommand();
-		// this.bindCommand(command, field);
-		// command.execute();
-		// } else {
-		List<MoveCommand> possibleMoves = this.getPossibleMoves(field);
-		if (possibleMoves.isEmpty()) {
-			return;
-		}
+		if (field.isHeroInReach(this.getPosition())) {
+			AttackCommand command = new AttackCommand();
+			this.bindCommand(command, field);
+			command.execute();
+		} else {
+			List<MoveCommand> possibleMoves = this.getPossibleMoves(field);
+			if (possibleMoves.isEmpty()) {
+				return;
+			}
 
-		RandomGenerator.getInstance().getCommand(possibleMoves).execute();
-		// }
+			RandomGenerator.getInstance().getCommand(possibleMoves).execute();
+		}
 	}
 
 	@Override

@@ -75,7 +75,8 @@ public class Field {
 		for (int i = position.x - 1; i < position.x + 2; i++) {
 			for (int j = position.y - 1; j < position.y + 2; j++) {
 				Position heroPosition = new Position(i, j);
-				if (this.getElements()[heroPosition.x][heroPosition.y] instanceof Hero) {
+				if (this.isInside(heroPosition)
+						&& this.getElements()[heroPosition.x][heroPosition.y] instanceof Hero) {
 					return true;
 				}
 			}
@@ -104,6 +105,10 @@ public class Field {
 			Engine.getInstance().gameOver();
 		}
 
+		if (this.hero.getHealthPoints() == 0) {
+			System.out.println("You lost!");
+			Engine.getInstance().gameOver();
+		}
 	}
 
 	@Override

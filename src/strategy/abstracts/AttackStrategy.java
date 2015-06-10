@@ -1,11 +1,21 @@
 package strategy.abstracts;
 
+import elements.abstracts.Character;
 import engine.concrete.Field;
 
-public interface AttackStrategy {
+public abstract class AttackStrategy {
 
-	void attack();
+	protected Field field;
+	protected Character character;
+
+	public void setField(Field field) {
+		this.field = field;
+	}
 	
-	void setField(Field field);
-	
+	public AttackStrategy(Character character) {
+		this.character = character;
+	}
+
+	public abstract void attack();
+
 }

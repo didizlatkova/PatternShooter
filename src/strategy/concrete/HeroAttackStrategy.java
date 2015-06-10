@@ -5,21 +5,14 @@ import java.util.List;
 
 import elements.abstracts.Character;
 import elements.abstracts.*;
-import engine.concrete.Field;
 import strategy.abstracts.AttackStrategy;
 
-public class HeroAttackStrategy implements AttackStrategy {
-
-	private Field field;
-	private Character character;
+public class HeroAttackStrategy extends AttackStrategy {
+	
 	private Position currentPosition;
 
-	public void setField(Field field) {
-		this.field = field;
-	}
-
 	public HeroAttackStrategy(Character character) {
-		this.character = character;
+		super(character);
 		this.currentPosition = character.getPosition();
 	}
 

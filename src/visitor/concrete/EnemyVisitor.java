@@ -33,8 +33,9 @@ public abstract class EnemyVisitor extends Character {
 
 	@Override
 	public void visit(Character character) {
-		// TODO Auto-generated method stub
-
+		System.out.println(String.format("%s is attacking you with %s!",
+				this.getName(), this.getWeapon().getName()));
+		character.takeAttack(this.getWeapon().DAMAGE_POINTS);
 	}
 
 }
