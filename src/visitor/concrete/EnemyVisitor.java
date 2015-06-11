@@ -4,6 +4,7 @@ import visitor.abstracts.Visitor;
 import elements.abstracts.Tool;
 import elements.abstracts.characters.Character;
 import elements.abstracts.weapons.Weapon;
+import engine.helpers.Logger;
 
 public abstract class EnemyVisitor extends Character {
 
@@ -23,8 +24,9 @@ public abstract class EnemyVisitor extends Character {
 
 	@Override
 	public void visit(Weapon weapon) {
-		System.out.println(String.format("%s just found a(n) %s.",
-				this.getName(), weapon.getName()));
+		Logger.getInstance().printMessage(
+				String.format("%s just found a(n) %s.", this.getName(),
+						weapon.getName()));
 
 		if (weapon.DAMAGE_POINTS > this.getWeapon().DAMAGE_POINTS) {
 			this.setWeapon(weapon);
@@ -33,8 +35,9 @@ public abstract class EnemyVisitor extends Character {
 
 	@Override
 	public void visit(Character character) {
-		System.out.println(String.format("%s is attacking you with %s!",
-				this.getName(), this.getWeapon().getName()));
+		Logger.getInstance().printMessage(
+				String.format("%s is attacking you with %s!", this.getName(),
+						this.getWeapon().getName()));
 		character.takeAttack(this.getWeapon());
 	}
 

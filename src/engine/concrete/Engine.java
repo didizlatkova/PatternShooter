@@ -1,9 +1,7 @@
 package engine.concrete;
 
-import command.concrete.CommandParser;
 import elements.abstracts.characters.Enemy;
-import factory.abstracts.ZoneFactory;
-import factory.concrete.MountainFactory;
+import engine.helpers.Logger;
 
 public class Engine {
 
@@ -21,12 +19,9 @@ public class Engine {
 		gameOver = true;
 	}
 
-	public void start() {
-		ZoneFactory factory = new MountainFactory();
-		Field field = new Field(5, 5, factory);
-		System.out.println(field.toString());
-
+	public void start(Field field) {
 		while (!gameOver) {
+			Logger.getInstance().promptUser();
 			field.getHero().takeTurn(field);
 			field.removeDeadEnemies();
 			field.checkForWin();
@@ -34,13 +29,11 @@ public class Engine {
 			for (Enemy enemy : field.getEnemies()) {
 				enemy.takeTurn(field);
 			}
-			
+
 			field.checkForLoss();
 
-			System.out.println(field.toString());
+			Logger.getInstance().printMessage(field.toString());
 		}
-		
-		CommandParser.getInstance().close();
 	}
 
 }

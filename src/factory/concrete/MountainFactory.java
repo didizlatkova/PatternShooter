@@ -13,8 +13,9 @@ import elements.concrete.*;
 import factory.abstracts.ZoneFactory;
 
 public class MountainFactory implements ZoneFactory {
-	
+
 	private static final int HEALTH_POINTS = 100;
+	private static final String RULES_PATH = "mountain.txt";
 
 	@Override
 	public List<Enemy> createEnemies() {
@@ -41,6 +42,11 @@ public class MountainFactory implements ZoneFactory {
 	@Override
 	public Hero createHero() {
 		return new Hero(new Gun(), HEALTH_POINTS);
+	}
+
+	@Override
+	public String getRulesPath() {
+		return RULES_PATH;
 	}
 
 }

@@ -1,6 +1,7 @@
 package elements.abstracts.weapons;
 
 import elements.abstracts.Item;
+import engine.helpers.Logger;
 import visitor.abstracts.Visitor;
 
 public abstract class Weapon extends Item {
@@ -12,7 +13,8 @@ public abstract class Weapon extends Item {
 	}
 
 	public void fire() {
-		System.out.println(String.format("Attacking with %s!", this.getName()));
+		Logger.getInstance().printMessage(
+				String.format("Attacking with %s!", this.getName()));
 	}
 
 	@Override

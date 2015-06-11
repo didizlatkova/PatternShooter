@@ -7,6 +7,7 @@ import elements.abstracts.*;
 import elements.abstracts.characters.Character;
 import elements.abstracts.characters.Enemy;
 import elements.concrete.*;
+import engine.helpers.Logger;
 import engine.helpers.RandomGenerator;
 import factory.abstracts.ZoneFactory;
 
@@ -100,19 +101,20 @@ public class Field {
 			this.enemies.remove(enemy);
 		}
 
-		System.out.println("Enemies left: " + this.enemies.size());
+		Logger.getInstance().printMessage(
+				"Enemies left: " + this.enemies.size());
 	}
 
 	public void checkForWin() {
 		if (this.enemies.isEmpty()) {
-			System.out.println("You win!");
+			Logger.getInstance().printMessage("You win!");
 			Engine.getInstance().gameOver();
 		}
 	}
 
 	public void checkForLoss() {
 		if (this.hero.getHealthPoints() == 0) {
-			System.out.println("You lost!");
+			Logger.getInstance().printMessage("You lost!");
 			Engine.getInstance().gameOver();
 		}
 	}

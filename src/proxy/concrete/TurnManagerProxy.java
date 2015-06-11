@@ -5,6 +5,7 @@ import command.concrete.CommandParser;
 import elements.abstracts.weapons.ContinuousDamageWeapon;
 import elements.concrete.Hero;
 import engine.concrete.Field;
+import engine.helpers.Logger;
 import proxy.abstracts.TurnManager;
 
 public class TurnManagerProxy implements TurnManager {
@@ -19,9 +20,10 @@ public class TurnManagerProxy implements TurnManager {
 	public void takeTurn(Field field, Hero hero) {
 		if (hero.getWeapon() instanceof ContinuousDamageWeapon
 				&& ((ContinuousDamageWeapon) hero.getWeapon()).isOn) {
-			System.out
-					.println(String
-							.format("You are currently firing a %s. Do you want to stop? yes/no",
+			Logger.getInstance()
+					.printMessage(
+							String.format(
+									"You are currently firing a %s. Do you want to stop? yes/no",
 									hero.getWeapon().getName()));
 			String input = CommandParser.getInstance().getScanner().nextLine();
 			if (input.equals("yes")) {

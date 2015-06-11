@@ -9,6 +9,7 @@ import elements.abstracts.Position;
 import elements.abstracts.weapons.Weapon;
 import elements.concrete.Hero;
 import engine.concrete.Field;
+import engine.helpers.Logger;
 
 public abstract class Character implements FieldElement, Visitor {
 
@@ -48,9 +49,10 @@ public abstract class Character implements FieldElement, Visitor {
 		if (this.healthPoints < 0) {
 			this.healthPoints = 0;
 		}
-		System.out.println(String.format(
-				"%s got damaged by %d points. Health points left: %d",
-				this.getName(), damagePoints, this.healthPoints));
+		Logger.getInstance().printMessage(
+				String.format(
+						"%s got damaged by %d points. Health points left: %d",
+						this.getName(), damagePoints, this.healthPoints));
 	}
 
 	public void bindCommand(Command command, Field field) {

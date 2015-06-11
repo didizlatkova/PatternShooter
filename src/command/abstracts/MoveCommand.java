@@ -6,6 +6,7 @@ import elements.abstracts.Tool;
 import elements.abstracts.characters.Character;
 import elements.concrete.*;
 import engine.concrete.Field;
+import engine.helpers.Logger;
 
 public abstract class MoveCommand implements Command {
 
@@ -29,8 +30,8 @@ public abstract class MoveCommand implements Command {
 		this.setNewPosition();
 		FieldElement visited = this.field.getElements()[this.newPosition.x][this.newPosition.y];
 		if (!isMovePossible()) {
-			System.out
-					.println(String.format("Cannot move %s!", this.getName()));
+			Logger.getInstance().printMessage(
+					String.format("Cannot move %s!", this.getName()));
 			return;
 		}
 		this.moveCharacter();

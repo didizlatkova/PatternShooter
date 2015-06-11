@@ -14,4 +14,6 @@ public interface ZoneFactory {
 
 	Hero createHero();
 
+	String getRulesPath();
+
 }

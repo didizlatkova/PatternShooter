@@ -4,6 +4,7 @@ import command.abstracts.Command;
 import elements.abstracts.*;
 import elements.abstracts.characters.Character;
 import elements.concrete.Hero;
+import engine.helpers.Logger;
 
 public class EquiptCommand implements Command {
 
@@ -24,14 +25,15 @@ public class EquiptCommand implements Command {
 		if (tool != null && tool instanceof Tool) {
 			if (!this.character.isUsing(((Tool) tool).type)) {
 				this.character.toolsInUse.add((Tool) tool);
-				System.out.println(tool.getName() + " equipped!");
+				Logger.getInstance()
+						.printMessage(tool.getName() + " equipped!");
 			} else {
-				System.out.println("You are already using a(n) "
-						+ ((Tool) tool).type);
+				Logger.getInstance().printMessage(
+						"You are already using a(n) " + ((Tool) tool).type);
 			}
 		} else {
-			System.out.println(String.format("You don't have %s!",
-					this.toolName));
+			Logger.getInstance().printMessage(
+					String.format("You don't have %s!", this.toolName));
 		}
 	}
 

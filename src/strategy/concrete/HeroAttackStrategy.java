@@ -7,6 +7,7 @@ import elements.abstracts.*;
 import elements.abstracts.characters.Character;
 import elements.abstracts.characters.Enemy;
 import elements.abstracts.weapons.MultipleDamageWeapon;
+import engine.helpers.Logger;
 import strategy.abstracts.AttackStrategy;
 
 public class HeroAttackStrategy extends AttackStrategy {
@@ -39,7 +40,8 @@ public class HeroAttackStrategy extends AttackStrategy {
 	public void attack() {
 		List<Enemy> surroundingEnemies = this.getSurroundingEnemies();
 		if (surroundingEnemies.isEmpty()) {
-			System.out.println("No enemies near you. Cannot attack!");
+			Logger.getInstance().printMessage(
+					"No enemies near you. Cannot attack!");
 			return;
 		}
 

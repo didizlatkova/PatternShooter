@@ -3,12 +3,13 @@ package command.concrete;
 import java.util.Scanner;
 
 import command.abstracts.Command;
+import engine.helpers.Logger;
 
 public class CommandParser {
 
 	private final String WEAPON_KEY_WORD = "use ";
 	private final String EQUIPT_KEY_WORD = "equipt ";
-	
+
 	private static CommandParser instance = new CommandParser();
 	private static Scanner scanner = new Scanner(System.in);
 
@@ -21,13 +22,15 @@ public class CommandParser {
 
 	public Command getCommand(String command) {
 		if (command.startsWith(WEAPON_KEY_WORD)) {
-			return new ChangeWeaponCommand(command.substring(WEAPON_KEY_WORD.length()));
+			return new ChangeWeaponCommand(command.substring(WEAPON_KEY_WORD
+					.length()));
 		}
 
 		if (command.startsWith(EQUIPT_KEY_WORD)) {
-			return new EquiptCommand(command.substring(EQUIPT_KEY_WORD.length()));
+			return new EquiptCommand(
+					command.substring(EQUIPT_KEY_WORD.length()));
 		}
-		
+
 		switch (command) {
 		case "left":
 			return new LeftCommand();
@@ -41,7 +44,7 @@ public class CommandParser {
 			return new AttackCommand();
 
 		default:
-			System.out.println("Invalid command!");
+			Logger.getInstance().printMessage("Invalid command!");
 			return null;
 		}
 	}

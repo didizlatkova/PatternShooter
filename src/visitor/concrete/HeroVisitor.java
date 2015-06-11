@@ -7,6 +7,7 @@ import elements.abstracts.Item;
 import elements.abstracts.Tool;
 import elements.abstracts.characters.Character;
 import elements.abstracts.weapons.Weapon;
+import engine.helpers.Logger;
 
 public abstract class HeroVisitor extends Character {
 
@@ -24,25 +25,28 @@ public abstract class HeroVisitor extends Character {
 	@Override
 	public void visit(Tool tool) {
 		this.toolbox.add(tool);
-		System.out
-				.println(String
-						.format("Congratulations! You just found a(n) %s. It was added to your toolbox!",
+		Logger.getInstance()
+				.printMessage(
+						String.format(
+								"Congratulations! You just found a(n) %s. It was added to your toolbox!",
 								tool.getName()));
 	}
 
 	@Override
 	public void visit(Weapon weapon) {
 		this.toolbox.add(weapon);
-		System.out
-				.println(String
-						.format("Congratulations! You just found a(n) %s. It was added to your weapons!",
+		Logger.getInstance()
+				.printMessage(
+						String.format(
+								"Congratulations! You just found a(n) %s. It was added to your weapons!",
 								weapon.getName()));
 	}
 
 	@Override
 	public void visit(Character character) {
-		System.out.println(String.format("Attacking %s with %s!",
-				character.getName(), this.getWeapon().getName()));
+		Logger.getInstance().printMessage(
+				String.format("Attacking %s with %s!", character.getName(),
+						this.getWeapon().getName()));
 		character.takeAttack(this.getWeapon());
 	}
 

@@ -2,6 +2,7 @@ package zones.common.tools;
 
 import elements.abstracts.Tool;
 import elements.abstracts.weapons.Weapon;
+import engine.helpers.Logger;
 import engine.helpers.ToolType;
 
 public class Armor extends Tool {
@@ -22,7 +23,7 @@ public class Armor extends Tool {
 
 	@Override
 	public int calculateDamage(Weapon weapon) {
-		System.out.println("You have armor!");
+		Logger.getInstance().printMessage("You have armor!");
 		return weapon.DAMAGE_POINTS / 2;
 	}
 }
