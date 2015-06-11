@@ -1,4 +1,5 @@
-package elements.abstracts;
+package elements.abstracts.weapons;
+
 
 public abstract class MultipleDamageWeapon extends Weapon {
 

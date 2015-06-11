@@ -1,7 +1,7 @@
 package engine.concrete;
 
 import command.concrete.CommandParser;
-import elements.abstracts.Enemy;
+import elements.abstracts.characters.Enemy;
 import factory.abstracts.ZoneFactory;
 import factory.concrete.MountainFactory;
 
@@ -39,6 +39,7 @@ public class Engine {
 
 			System.out.println(field.toString());
 		}
+		
 		CommandParser.getInstance().close();
 	}
 

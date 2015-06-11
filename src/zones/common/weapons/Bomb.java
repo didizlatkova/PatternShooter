@@ -1,6 +1,6 @@
 package zones.common.weapons;
 
-import elements.abstracts.MultipleDamageWeapon;
+import elements.abstracts.weapons.MultipleDamageWeapon;
 
 public class Bomb extends MultipleDamageWeapon {
 

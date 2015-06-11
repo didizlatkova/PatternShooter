@@ -1,6 +1,6 @@
 package zones.mountain.weapons;
 
-import elements.abstracts.Weapon;
+import elements.abstracts.weapons.Weapon;
 
 public class Pickax extends Weapon {
 

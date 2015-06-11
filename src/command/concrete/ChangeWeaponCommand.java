@@ -1,9 +1,9 @@
 package command.concrete;
 
 import command.abstracts.Command;
-import elements.abstracts.Character;
 import elements.abstracts.Item;
-import elements.abstracts.Weapon;
+import elements.abstracts.characters.Character;
+import elements.abstracts.weapons.Weapon;
 import elements.concrete.Hero;
 
 public class ChangeWeaponCommand implements Command {

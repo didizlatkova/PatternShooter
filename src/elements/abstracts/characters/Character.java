@@ -1,9 +1,12 @@
-package elements.abstracts;
+package elements.abstracts.characters;
 
 import command.abstracts.*;
 import command.concrete.*;
 import strategy.abstracts.AttackStrategy;
 import visitor.abstracts.Visitor;
+import elements.abstracts.FieldElement;
+import elements.abstracts.Position;
+import elements.abstracts.weapons.Weapon;
 import elements.concrete.Hero;
 import engine.concrete.Field;
 

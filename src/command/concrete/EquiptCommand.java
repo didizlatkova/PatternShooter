@@ -1,8 +1,8 @@
 package command.concrete;
 
 import command.abstracts.Command;
-import elements.abstracts.Character;
 import elements.abstracts.*;
+import elements.abstracts.characters.Character;
 import elements.concrete.Hero;
 
 public class EquiptCommand implements Command {

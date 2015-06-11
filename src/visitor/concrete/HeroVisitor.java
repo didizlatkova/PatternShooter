@@ -3,10 +3,10 @@ package visitor.concrete;
 import java.util.List;
 
 import visitor.abstracts.Visitor;
-import elements.abstracts.Character;
 import elements.abstracts.Item;
 import elements.abstracts.Tool;
-import elements.abstracts.Weapon;
+import elements.abstracts.characters.Character;
+import elements.abstracts.weapons.Weapon;
 
 public abstract class HeroVisitor extends Character {
 

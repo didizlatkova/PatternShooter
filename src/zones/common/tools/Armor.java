@@ -1,7 +1,7 @@
 package zones.common.tools;
 
 import elements.abstracts.Tool;
-import elements.abstracts.Weapon;
+import elements.abstracts.weapons.Weapon;
 import engine.helpers.ToolType;
 
 public class Armor extends Tool {

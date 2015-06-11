@@ -1,6 +1,6 @@
 package zones.common.weapons;
 
-import elements.abstracts.Weapon;
+import elements.abstracts.weapons.Weapon;
 
 public class Blast extends Weapon {
 

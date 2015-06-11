@@ -1,6 +1,6 @@
 package strategy.abstracts;
 
-import elements.abstracts.Character;
+import elements.abstracts.characters.Character;
 import engine.concrete.Field;
 
 public abstract class AttackStrategy {

@@ -1,8 +1,8 @@
 package visitor.abstracts;
 
-import elements.abstracts.Character;
 import elements.abstracts.Tool;
-import elements.abstracts.Weapon;
+import elements.abstracts.characters.Character;
+import elements.abstracts.weapons.Weapon;
 
 
 public interface Visitor {

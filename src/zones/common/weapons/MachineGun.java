@@ -1,8 +1,8 @@
 package zones.common.weapons;
 
-import elements.abstracts.Weapon;
+import elements.abstracts.weapons.ContinuousDamageWeapon;
 
-public class MachineGun extends Weapon {
+public class MachineGun extends ContinuousDamageWeapon {
 
 	public MachineGun() {
 		super(40);
@@ -17,5 +17,5 @@ public class MachineGun extends Weapon {
 	public String getName() {
 		return "MachineGun";
 	}
-	
+
 }

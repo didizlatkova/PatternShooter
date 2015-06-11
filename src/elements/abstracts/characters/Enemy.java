@@ -1,4 +1,4 @@
-package elements.abstracts;
+package elements.abstracts.characters;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +8,7 @@ import strategy.concrete.EnemyAttackStrategy;
 import visitor.concrete.EnemyVisitor;
 import command.abstracts.MoveCommand;
 import command.concrete.*;
+import elements.abstracts.weapons.Weapon;
 import engine.concrete.Field;
 import engine.helpers.RandomGenerator;
 

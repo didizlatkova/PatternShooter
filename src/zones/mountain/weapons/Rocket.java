@@ -1,6 +1,6 @@
 package zones.mountain.weapons;
 
-import elements.abstracts.MultipleDamageWeapon;
+import elements.abstracts.weapons.MultipleDamageWeapon;
 
 public class Rocket extends MultipleDamageWeapon {
 

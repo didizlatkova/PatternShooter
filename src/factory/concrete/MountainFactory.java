@@ -7,8 +7,8 @@ import zones.common.tools.Armor;
 import zones.common.weapons.*;
 import zones.mountain.characters.*;
 import zones.mountain.weapons.*;
-import elements.abstracts.Enemy;
 import elements.abstracts.Item;
+import elements.abstracts.characters.Enemy;
 import elements.concrete.*;
 import factory.abstracts.ZoneFactory;
 

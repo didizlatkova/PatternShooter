@@ -1,9 +1,9 @@
 package command.abstracts;
 
-import elements.abstracts.Character;
 import elements.abstracts.FieldElement;
 import elements.abstracts.Position;
 import elements.abstracts.Tool;
+import elements.abstracts.characters.Character;
 import elements.concrete.*;
 import engine.concrete.Field;
 

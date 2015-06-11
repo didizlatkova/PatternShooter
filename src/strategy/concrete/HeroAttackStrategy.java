@@ -3,12 +3,14 @@ package strategy.concrete;
 import java.util.ArrayList;
 import java.util.List;
 
-import elements.abstracts.Character;
 import elements.abstracts.*;
+import elements.abstracts.characters.Character;
+import elements.abstracts.characters.Enemy;
+import elements.abstracts.weapons.MultipleDamageWeapon;
 import strategy.abstracts.AttackStrategy;
 
 public class HeroAttackStrategy extends AttackStrategy {
-	
+
 	private Position currentPosition;
 
 	public HeroAttackStrategy(Character character) {
@@ -41,6 +43,7 @@ public class HeroAttackStrategy extends AttackStrategy {
 			return;
 		}
 
+		this.character.getWeapon().fire();
 		if (this.character.getWeapon() instanceof MultipleDamageWeapon) {
 			for (Enemy enemy : surroundingEnemies) {
 				enemy.accept(this.character);

@@ -1,6 +1,6 @@
 package zones.mountain.characters;
 
-import elements.abstracts.Enemy;
+import elements.abstracts.characters.Enemy;
 import zones.common.weapons.Blast;
 
 public class Baronom extends Enemy {

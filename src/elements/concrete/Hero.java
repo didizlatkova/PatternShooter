@@ -3,24 +3,27 @@ package elements.concrete;
 import java.util.ArrayList;
 import java.util.List;
 
+import proxy.abstracts.TurnManager;
+import proxy.concrete.TurnManagerProxy;
 import strategy.abstracts.AttackStrategy;
 import strategy.concrete.HeroAttackStrategy;
 import visitor.concrete.HeroVisitor;
-import command.abstracts.Command;
-import command.concrete.CommandParser;
 import elements.abstracts.*;
+import elements.abstracts.weapons.Weapon;
 import engine.concrete.Field;
 import engine.helpers.ToolType;
 
 public class Hero extends HeroVisitor {
 
 	public List<Tool> toolsInUse;
+	private TurnManager turnManager;
 
 	public Hero(Weapon weapon, int healthPoints) {
 		super(weapon, healthPoints);
 		this.toolbox = new ArrayList<Item>();
 		this.toolbox.add(weapon);
 		this.toolsInUse = new ArrayList<Tool>();
+		this.turnManager = new TurnManagerProxy();
 	}
 
 	protected AttackStrategy getStrategy() {
@@ -29,12 +32,7 @@ public class Hero extends HeroVisitor {
 
 	@Override
 	public void takeTurn(Field field) {
-		String input = CommandParser.getInstance().getScanner().nextLine();
-		Command command = CommandParser.getInstance().getCommand(input);
-		if (command != null) {
-			this.bindCommand(command, field);
-			command.execute();
-		}
+		this.turnManager.takeTurn(field, this);
 	}
 
 	public void takeAttack(Weapon weapon) {

@@ -1,6 +1,6 @@
 package strategy.concrete;
 
-import elements.abstracts.Character;
+import elements.abstracts.characters.Character;
 import strategy.abstracts.AttackStrategy;
 
 public class EnemyAttackStrategy extends AttackStrategy {

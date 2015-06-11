@@ -1,5 +1,6 @@
 package elements.abstracts;
 
+import elements.abstracts.weapons.Weapon;
 import engine.helpers.ToolType;
 import visitor.abstracts.Visitor;
 
