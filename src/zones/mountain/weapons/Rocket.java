@@ -10,7 +10,7 @@ public class Rocket extends MultipleDamageWeapon {
 
 	@Override
 	public String toString() {
-		return "R";
+		return "R ";
 	}
 	
 	@Override

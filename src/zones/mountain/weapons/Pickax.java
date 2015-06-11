@@ -10,7 +10,7 @@ public class Pickax extends Weapon {
 
 	@Override
 	public String toString() {
-		return "P";
+		return "P ";
 	}
 	
 	@Override

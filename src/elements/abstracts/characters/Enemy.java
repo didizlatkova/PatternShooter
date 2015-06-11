@@ -66,7 +66,7 @@ public abstract class Enemy extends EnemyVisitor {
 
 	@Override
 	public String toString() {
-		return "E";
+		return "E ";
 	}
 
 }

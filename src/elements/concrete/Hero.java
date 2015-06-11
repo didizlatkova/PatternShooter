@@ -90,7 +90,7 @@ public class Hero extends HeroVisitor {
 
 	@Override
 	public String toString() {
-		return "H";
+		return "H ";
 	}
 
 }

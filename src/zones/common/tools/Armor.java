@@ -13,7 +13,7 @@ public class Armor extends Tool {
 
 	@Override
 	public String toString() {
-		return "A";
+		return "A ";
 	}
 
 	@Override

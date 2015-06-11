@@ -1,12 +1,12 @@
 package zones.mountain.characters;
 
 import elements.abstracts.characters.Enemy;
-import zones.common.weapons.Bomb;
+import zones.common.weapons.Blast;
 
 public class MountainEvil extends Enemy {
 
 	public MountainEvil(int healthPoints) {
-		super(new Bomb(), healthPoints);
+		super(new Blast(), healthPoints);
 	}
 	
 	@Override

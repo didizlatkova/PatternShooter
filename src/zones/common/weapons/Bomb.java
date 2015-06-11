@@ -5,12 +5,12 @@ import elements.abstracts.weapons.MultipleDamageWeapon;
 public class Bomb extends MultipleDamageWeapon {
 
 	public Bomb() {
-		super(20);
+		super(30);
 	}
 
 	@Override
 	public String toString() {
-		return "B";
+		return "B ";
 	}
 	
 	@Override

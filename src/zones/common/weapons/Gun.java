@@ -5,7 +5,7 @@ import elements.abstracts.weapons.Weapon;
 public class Gun extends Weapon {
 
 	public Gun() {
-		super(20);
+		super(40);
 	}
 
 	@Override

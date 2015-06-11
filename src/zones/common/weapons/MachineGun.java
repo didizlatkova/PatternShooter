@@ -10,7 +10,7 @@ public class MachineGun extends ContinuousDamageWeapon {
 
 	@Override
 	public String toString() {
-		return "M";
+		return "M ";
 	}
 
 	@Override

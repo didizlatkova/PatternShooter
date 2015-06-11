@@ -124,7 +124,7 @@ public class Field {
 		StringBuilder sb = new StringBuilder();
 
 		for (int j = 0; j < elements[0].length; j++) {
-			sb.append("--");
+			sb.append("---");
 		}
 		sb.append("-\n");
 
@@ -132,7 +132,7 @@ public class Field {
 			sb.append("|");
 			for (int j = 0; j < elements[i].length; j++) {
 				if (elements[i][j] == null) {
-					sb.append(" ");
+					sb.append("  ");
 				} else {
 					sb.append(elements[i][j].toString());
 				}
@@ -140,7 +140,7 @@ public class Field {
 			}
 			sb.append("\n");
 			for (int j = 0; j < elements[i].length; j++) {
-				sb.append("--");
+				sb.append("---");
 			}
 			sb.append("-\n");
 		}

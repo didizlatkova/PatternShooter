@@ -10,7 +10,7 @@ public class Karabiner extends Weapon {
 
 	@Override
 	public String toString() {
-		return "K";
+		return "K ";
 	}
 
 	@Override

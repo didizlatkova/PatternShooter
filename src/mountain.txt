@@ -10,18 +10,18 @@ equipt <tool>
 use <weapon>
 
 Characters:
-    Hero - Gun
-    Mountain evil - Bombs
-    Baronom - Blast
+    Hero - Bomb
+    Mountain evil - Gun
+    Baronom - Rockets
     Icelander - Pickax
     BigHook - Rope
 
 Weapons and tools:
-    Bombs - has damage 20
+    Bomb - has damage 30 and affects all enemies around it
     Blast - has damage 30
     Gun - has damage 40
     Machine Gun - fires continuously and has damage 40
-    Rockets - has damage 10
+    Rocket - has damage 10
     Pickax - has damage 6
     Rope - combined with Karabiner can capture the hero and he cannot attack his next turn
     Karabiner
