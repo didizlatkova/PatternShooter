@@ -59,6 +59,7 @@ public abstract class Enemy extends EnemyVisitor {
 	}
 
 	public void takeAttack(Weapon weapon) {
+		this.damagePoints = weapon.DAMAGE_POINTS;
 		super.takeAttack(weapon);
 	}
 

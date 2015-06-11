@@ -17,6 +17,6 @@ public abstract class Tool extends Item {
 		visitor.visit(this);
 	}
 
-	public abstract void takeAttack(Weapon weapon);
+	public abstract int calculateDamage(Weapon weapon);
 
 }

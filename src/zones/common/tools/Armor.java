@@ -21,8 +21,8 @@ public class Armor extends Tool {
 	}
 
 	@Override
-	public void takeAttack(Weapon weapon) {
-		
+	public int calculateDamage(Weapon weapon) {
+		System.out.println("You have armor!");
+		return weapon.DAMAGE_POINTS / 2;
 	}
-
 }

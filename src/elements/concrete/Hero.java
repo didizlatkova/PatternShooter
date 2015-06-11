@@ -37,18 +37,22 @@ public class Hero extends HeroVisitor {
 		}
 	}
 
-	@Override
-	// Chain of responsibility
 	public void takeAttack(Weapon weapon) {
+		this.damagePoints = getDamagePoints(weapon);
+		super.takeAttack(weapon);
+	}
+
+	// Chain of responsibility
+	public int getDamagePoints(Weapon weapon) {
 		if (!this.toolsInUse.isEmpty()) {
 			for (int i = 0; i < this.toolsInUse.size() - 1; i++) {
 				this.toolsInUse.get(i).nextHandler(this.toolsInUse.get(i + 1));
 			}
 
-			this.toolsInUse.get(0).takeAttack(weapon);
+			return this.toolsInUse.get(0).calculateDamage(weapon);
 		}
 
-		super.takeAttack(weapon);
+		return weapon.DAMAGE_POINTS;
 	}
 
 	public Item getItemByName(String name) {
