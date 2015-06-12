@@ -6,8 +6,7 @@ import visitor.abstracts.Visitor;
 
 public abstract class Tool extends Item {
 
-	Tool handler;
-	public ToolType type;
+	protected Tool handler;
 
 	public void nextHandler(Tool handler) {
 		this.handler = handler;
@@ -18,6 +17,14 @@ public abstract class Tool extends Item {
 		visitor.visit(this);
 	}
 
-	public abstract int calculateDamage(Weapon weapon);
+	public abstract ToolType getType();
+
+	public int calculateDamage(Weapon weapon, int damagePoints) {
+		if (this.handler != null) {
+			return this.handler.calculateDamage(weapon, damagePoints);
+		}
+
+		return damagePoints;
+	}
 
 }

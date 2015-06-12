@@ -11,7 +11,7 @@ public class Gorgonel extends Enemy {
 	
 	@Override
 	public String toString() {
-		return "G ";
+		return "Go";
 	}
 
 	@Override

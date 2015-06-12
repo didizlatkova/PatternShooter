@@ -1,5 +1,5 @@
 package engine.helpers;
 
 public enum ToolType {
-	Armor
+	Armor, Mask, Chemical
 }

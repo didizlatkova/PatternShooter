@@ -7,10 +7,6 @@ import engine.helpers.ToolType;
 
 public class Armor extends Tool {
 
-	public Armor() {
-		this.type = ToolType.Armor;
-	}
-
 	@Override
 	public String toString() {
 		return "A ";
@@ -22,8 +18,13 @@ public class Armor extends Tool {
 	}
 
 	@Override
-	public int calculateDamage(Weapon weapon) {
+	public int calculateDamage(Weapon weapon, int damagePoints) {
 		Logger.getInstance().printMessage("You have armor!");
-		return weapon.DAMAGE_POINTS / 2;
+		return super.calculateDamage(weapon, damagePoints / 2);
+	}
+
+	@Override
+	public ToolType getType() {
+		return ToolType.Armor;
 	}
 }

@@ -4,6 +4,7 @@ import zones.factory.weapons.ChemicalMachineGun;
 import elements.abstracts.Tool;
 import elements.abstracts.weapons.Weapon;
 import engine.helpers.Logger;
+import engine.helpers.ToolType;
 
 public class GasMask extends Tool {
 
@@ -11,20 +12,25 @@ public class GasMask extends Tool {
 	public String getName() {
 		return "GasMask";
 	}
-	
+
 	@Override
 	public String toString() {
 		return "GM";
 	}
 
 	@Override
-	public int calculateDamage(Weapon weapon) {
+	public int calculateDamage(Weapon weapon, int damagePoints) {
 		if (weapon instanceof ChemicalMachineGun) {
 			Logger.getInstance().printMessage("You have gas mask!");
 			return 0;
 		}
 
-		return weapon.DAMAGE_POINTS;
+		return super.calculateDamage(weapon, damagePoints);
+	}
+
+	@Override
+	public ToolType getType() {
+		return ToolType.Mask;
 	}
 
 }

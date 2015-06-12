@@ -58,7 +58,7 @@ public class Hero extends HeroVisitor {
 				this.toolsInUse.get(i).nextHandler(this.toolsInUse.get(i + 1));
 			}
 
-			return this.toolsInUse.get(0).calculateDamage(weapon);
+			return this.toolsInUse.get(0).calculateDamage(weapon, weapon.DAMAGE_POINTS);
 		}
 
 		return weapon.DAMAGE_POINTS;
@@ -76,7 +76,7 @@ public class Hero extends HeroVisitor {
 
 	public boolean isUsing(ToolType type) {
 		for (Tool tool : toolsInUse) {
-			if (tool.type.equals(type)) {
+			if (tool.getType().equals(type)) {
 				return true;
 			}
 		}
