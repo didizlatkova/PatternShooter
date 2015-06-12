@@ -17,7 +17,6 @@ public class BigHook extends CapturingEnemy {
 
 	public BigHook(int healthPoints) {
 		super(new Rope(), healthPoints);
-		this.canCapture = true;
 	}
 
 	@Override
@@ -39,7 +38,7 @@ public class BigHook extends CapturingEnemy {
 				String.format("%s just found a(n) %s. Now it can capture you!",
 						this.getName(), weapon.getName()));
 	}
-	
+
 	@Override
 	public String toString() {
 		return "BH";

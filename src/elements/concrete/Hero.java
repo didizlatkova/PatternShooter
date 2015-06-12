@@ -43,6 +43,7 @@ public class Hero extends HeroVisitor {
 	@Override
 	public void takeTurn(Field field) {
 		this.turnManager.takeTurn(field, this);
+		this.setCanAttack(true);
 	}
 
 	public void takeAttack(Weapon weapon) {

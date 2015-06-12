@@ -116,6 +116,7 @@ public class Field {
 					String.format(
 							"%s got lonely and committed suicide! You win!",
 							this.enemies.get(0).getName()));
+			Engine.getInstance().gameOver();
 		}
 	}
 

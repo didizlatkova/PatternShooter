@@ -58,7 +58,6 @@ public class HeroAttackStrategy extends AttackStrategy {
 		} else {
 			Logger.getInstance().printMessage(
 					"Sorry you are captured and can't attack!");
-			((Hero) this.character).setCanAttack(true);
 		}
 	}
 
