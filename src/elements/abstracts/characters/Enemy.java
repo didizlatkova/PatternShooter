@@ -42,7 +42,7 @@ public abstract class Enemy extends EnemyVisitor {
 	}
 
 	protected AttackStrategy getStrategy() {
-		return new EnemyAttackStrategy(this);
+		return new EnemyAttackStrategy();
 	}
 
 	@Override

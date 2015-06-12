@@ -5,13 +5,9 @@ import strategy.abstracts.AttackStrategy;
 
 public class EnemyAttackStrategy extends AttackStrategy {
 
-	public EnemyAttackStrategy(Character character) {
-		super(character);
-	}
-
 	@Override
-	public void attack() {
-		this.field.getHero().accept(this.character);
+	public void attack(Character character) {
+		this.field.getHero().accept(character);
 	}
 
 }

@@ -37,7 +37,7 @@ public class Hero extends HeroVisitor {
 	}
 
 	protected AttackStrategy getStrategy() {
-		return new HeroAttackStrategy(this);
+		return new HeroAttackStrategy();
 	}
 
 	@Override

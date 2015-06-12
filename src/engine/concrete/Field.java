@@ -1,6 +1,7 @@
 package engine.concrete;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import elements.abstracts.*;
@@ -114,6 +115,28 @@ public class Field {
 		}
 
 		return sb.toString();
+	}
+
+	public FieldMemento saveOptions() {
+		return new FieldMemento(this.elements);
+	}
+
+	public void restoreOptions(FieldMemento memento) {
+		this.elements = Arrays.copyOf(memento.getFieldElements(),
+				memento.getFieldElements().length);
+	}
+
+	public static class FieldMemento {
+		private FieldElement[][] fieldElements;
+
+		private FieldMemento(FieldElement[][] fieldElements) {
+			this.fieldElements = Arrays.copyOf(fieldElements,
+					fieldElements.length);
+		}
+
+		private FieldElement[][] getFieldElements() {
+			return this.fieldElements;
+		}
 	}
 
 }

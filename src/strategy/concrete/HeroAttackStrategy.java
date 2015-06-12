@@ -13,18 +13,11 @@ import strategy.abstracts.AttackStrategy;
 
 public class HeroAttackStrategy extends AttackStrategy {
 
-	private Position currentPosition;
-
-	public HeroAttackStrategy(Character character) {
-		super(character);
-		this.currentPosition = character.getPosition();
-	}
-
-	private List<Enemy> getSurroundingEnemies() {
+	private List<Enemy> getSurroundingEnemies(Position currentPosition) {
 		List<Enemy> enemies = new ArrayList<Enemy>();
 
-		for (int i = this.currentPosition.x - 1; i < this.currentPosition.x + 2; i++) {
-			for (int j = this.currentPosition.y - 1; j < this.currentPosition.y + 2; j++) {
+		for (int i = currentPosition.x - 1; i < currentPosition.x + 2; i++) {
+			for (int j = currentPosition.y - 1; j < currentPosition.y + 2; j++) {
 				Position enemyPosition = new Position(i, j);
 				if (field.isInside(enemyPosition)
 						&& !enemyPosition.equals(currentPosition)
@@ -38,22 +31,22 @@ public class HeroAttackStrategy extends AttackStrategy {
 	}
 
 	@Override
-	public void attack() {
-		if (((Hero) this.character).canAttack()) {
-			List<Enemy> surroundingEnemies = this.getSurroundingEnemies();
+	public void attack(Character character) {
+		if (((Hero) character).canAttack()) {
+			List<Enemy> surroundingEnemies = this.getSurroundingEnemies(character.getPosition());
 			if (surroundingEnemies.isEmpty()) {
 				Logger.getInstance().printMessage(
 						"No enemies near you. Cannot attack!");
 				return;
 			}
 
-			this.character.getWeapon().fire();
-			if (this.character.getWeapon() instanceof MultipleDamageWeapon) {
+			character.getWeapon().fire();
+			if (character.getWeapon() instanceof MultipleDamageWeapon) {
 				for (Enemy enemy : surroundingEnemies) {
-					enemy.accept(this.character);
+					enemy.accept(character);
 				}
 			} else {
-				surroundingEnemies.get(0).accept(this.character);
+				surroundingEnemies.get(0).accept(character);
 			}
 		} else {
 			Logger.getInstance().printMessage(

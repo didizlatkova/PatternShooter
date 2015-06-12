@@ -26,7 +26,7 @@ public class BigHook extends CapturingEnemy {
 
 	@Override
 	protected AttackStrategy getStrategy() {
-		return new CaptureAttackStrategy(this);
+		return new CaptureAttackStrategy();
 	}
 
 	@Override
