@@ -4,12 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import elements.abstracts.*;
-import elements.abstracts.characters.CapturingEnemy;
+import elements.abstracts.characters.*;
 import elements.abstracts.characters.Character;
-import elements.abstracts.characters.Enemy;
 import elements.concrete.*;
-import engine.helpers.Logger;
-import engine.helpers.RandomGenerator;
+import engine.helpers.*;
 import factory.abstracts.ZoneFactory;
 
 public class Field {
@@ -64,29 +62,12 @@ public class Field {
 	}
 
 	public boolean isInside(Position position) {
-		if (position.x < 0 || position.x >= this.elements.length) {
-			return false;
-		}
-
-		if (position.y < 0 || position.y >= this.elements[0].length) {
+		if (position.x < 0 || position.x >= this.elements.length
+				|| position.y < 0 || position.y >= this.elements[0].length) {
 			return false;
 		}
 
 		return true;
-	}
-
-	public boolean isHeroInReach(Position position) {
-		for (int i = position.x - 1; i < position.x + 2; i++) {
-			for (int j = position.y - 1; j < position.y + 2; j++) {
-				Position heroPosition = new Position(i, j);
-				if (this.isInside(heroPosition)
-						&& this.getElements()[heroPosition.x][heroPosition.y] instanceof Hero) {
-					return true;
-				}
-			}
-		}
-
-		return false;
 	}
 
 	public void removeDeadEnemies() {
@@ -104,27 +85,6 @@ public class Field {
 
 		Logger.getInstance().printMessage(
 				"Enemies left: " + this.enemies.size());
-	}
-
-	public void checkForWin() {
-		if (this.enemies.isEmpty()) {
-			Logger.getInstance().printMessage("You win!");
-			Engine.getInstance().gameOver();
-		} else if (this.enemies.size() == 1
-				&& this.enemies.get(0) instanceof CapturingEnemy) {
-			Logger.getInstance().printMessage(
-					String.format(
-							"%s got lonely and committed suicide! You win!",
-							this.enemies.get(0).getName()));
-			Engine.getInstance().gameOver();
-		}
-	}
-
-	public void checkForLoss() {
-		if (this.hero.getHealthPoints() == 0) {
-			Logger.getInstance().printMessage("You lost!");
-			Engine.getInstance().gameOver();
-		}
 	}
 
 	@Override

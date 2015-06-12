@@ -8,7 +8,9 @@ import strategy.concrete.EnemyAttackStrategy;
 import visitor.concrete.EnemyVisitor;
 import command.abstracts.MoveCommand;
 import command.concrete.*;
+import elements.abstracts.Position;
 import elements.abstracts.weapons.Weapon;
+import elements.concrete.Hero;
 import engine.concrete.Field;
 import engine.helpers.RandomGenerator;
 
@@ -45,7 +47,7 @@ public abstract class Enemy extends EnemyVisitor {
 
 	@Override
 	public void takeTurn(Field field) {
-		if (field.isHeroInReach(this.getPosition())) {
+		if (this.isHeroInReach(field)) {
 			AttackCommand command = new AttackCommand();
 			this.bindCommand(command, field);
 			command.execute();
@@ -57,6 +59,20 @@ public abstract class Enemy extends EnemyVisitor {
 
 			RandomGenerator.getInstance().getCommand(possibleMoves).execute();
 		}
+	}
+
+	private boolean isHeroInReach(Field field) {
+		for (int i = position.x - 1; i < position.x + 2; i++) {
+			for (int j = position.y - 1; j < position.y + 2; j++) {
+				Position heroPosition = new Position(i, j);
+				if (field.isInside(heroPosition)
+						&& field.getElements()[heroPosition.x][heroPosition.y] instanceof Hero) {
+					return true;
+				}
+			}
+		}
+
+		return false;
 	}
 
 	public void takeAttack(Weapon weapon) {

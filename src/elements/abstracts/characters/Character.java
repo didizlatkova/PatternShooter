@@ -13,7 +13,7 @@ import engine.helpers.Logger;
 
 public abstract class Character implements FieldElement, Visitor {
 
-	private Position position;
+	protected Position position;
 	private Weapon weapon;
 	protected int healthPoints;
 	protected int damagePoints;
