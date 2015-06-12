@@ -17,6 +17,15 @@ public class Hero extends HeroVisitor {
 
 	public List<Tool> toolsInUse;
 	private TurnManager turnManager;
+	private boolean canAttack;
+
+	public boolean canAttack() {
+		return canAttack;
+	}
+
+	public void setCanAttack(boolean canAttack) {
+		this.canAttack = canAttack;
+	}
 
 	public Hero(Weapon weapon, int healthPoints) {
 		super(weapon, healthPoints);
@@ -24,6 +33,7 @@ public class Hero extends HeroVisitor {
 		this.toolbox.add(weapon);
 		this.toolsInUse = new ArrayList<Tool>();
 		this.turnManager = new TurnManagerProxy();
+		this.setCanAttack(true);
 	}
 
 	protected AttackStrategy getStrategy() {

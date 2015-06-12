@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import elements.abstracts.*;
+import elements.abstracts.characters.CapturingEnemy;
 import elements.abstracts.characters.Character;
 import elements.abstracts.characters.Enemy;
 import elements.concrete.*;
@@ -109,6 +110,12 @@ public class Field {
 		if (this.enemies.isEmpty()) {
 			Logger.getInstance().printMessage("You win!");
 			Engine.getInstance().gameOver();
+		} else if (this.enemies.size() == 1
+				&& this.enemies.get(0) instanceof CapturingEnemy) {
+			Logger.getInstance().printMessage(
+					String.format(
+							"%s got lonely and committed suicide! You win!",
+							this.enemies.get(0).getName()));
 		}
 	}
 

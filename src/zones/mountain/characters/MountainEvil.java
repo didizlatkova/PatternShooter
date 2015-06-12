@@ -13,5 +13,10 @@ public class MountainEvil extends Enemy {
 	public String getName() {
 		return "MountainEvil";
 	}
+
+	@Override
+	public String toString() {
+		return "ME";
+	}
 	
 }

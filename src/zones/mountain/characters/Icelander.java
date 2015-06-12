@@ -14,4 +14,9 @@ public class Icelander extends Enemy {
 		return "Icelander";
 	}
 	
+	@Override
+	public String toString() {
+		return "I ";
+	}
+	
 }

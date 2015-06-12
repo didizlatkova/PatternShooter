@@ -13,5 +13,10 @@ public class Baronom extends Enemy {
 	public String getName() {
 		return "Baronom";
 	}
+	
+	@Override
+	public String toString() {
+		return "Ba";
+	}
 
 }

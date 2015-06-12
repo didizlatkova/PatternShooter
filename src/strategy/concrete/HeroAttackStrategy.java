@@ -7,6 +7,7 @@ import elements.abstracts.*;
 import elements.abstracts.characters.Character;
 import elements.abstracts.characters.Enemy;
 import elements.abstracts.weapons.MultipleDamageWeapon;
+import elements.concrete.Hero;
 import engine.helpers.Logger;
 import strategy.abstracts.AttackStrategy;
 
@@ -38,20 +39,26 @@ public class HeroAttackStrategy extends AttackStrategy {
 
 	@Override
 	public void attack() {
-		List<Enemy> surroundingEnemies = this.getSurroundingEnemies();
-		if (surroundingEnemies.isEmpty()) {
-			Logger.getInstance().printMessage(
-					"No enemies near you. Cannot attack!");
-			return;
-		}
+		if (((Hero) this.character).canAttack()) {
+			List<Enemy> surroundingEnemies = this.getSurroundingEnemies();
+			if (surroundingEnemies.isEmpty()) {
+				Logger.getInstance().printMessage(
+						"No enemies near you. Cannot attack!");
+				return;
+			}
 
-		this.character.getWeapon().fire();
-		if (this.character.getWeapon() instanceof MultipleDamageWeapon) {
-			for (Enemy enemy : surroundingEnemies) {
-				enemy.accept(this.character);
+			this.character.getWeapon().fire();
+			if (this.character.getWeapon() instanceof MultipleDamageWeapon) {
+				for (Enemy enemy : surroundingEnemies) {
+					enemy.accept(this.character);
+				}
+			} else {
+				surroundingEnemies.get(0).accept(this.character);
 			}
 		} else {
-			surroundingEnemies.get(0).accept(this.character);
+			Logger.getInstance().printMessage(
+					"Sorry you are captured and can't attack!");
+			((Hero) this.character).setCanAttack(true);
 		}
 	}
 
