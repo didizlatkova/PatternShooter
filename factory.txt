@@ -1,0 +1,28 @@
+You are in the Factory Zone!
+
+Allowed commands:
+left
+right
+up
+down
+attack
+equipt <tool>
+use <weapon>
+
+Characters:
+    Hero (H) - Bomb
+    Sulfurhead (Su) - Gun
+    Slimeman (S) - Blast
+    Plasmodium (P) - Chemical machine gun
+    Gorgonel (G) - Cocktail molotov
+
+Weapons and tools:
+    Bomb (B) - has damage 30 and affects all enemies around it
+    Blast (Bl) - has damage 20
+    Gun (G) - has damage 40
+    Machine Gun (M) - fires continuously and has damage 40
+    Chemical machine gun (Ch) - fires continuously and has damage 40, can be neutralized by Gas Mask
+    Cocktail molotov (CM) - has damage 30, can be neutralized by Glycerin balls
+    Gas Mask (GM) - neutralizes Chemical machine gun
+    Armor (A) - protects hero from damage and minimizes it by half
+    Glycerin balls (GB) - neutralizes Cocktail molotov
