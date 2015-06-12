@@ -61,6 +61,8 @@ public abstract class Character implements FieldElement, Visitor {
 			AttackStrategy strategy = this.getStrategy();
 			strategy.setField(field);
 			((AttackCommand) command).setStrategy(strategy);
+		} else if (command instanceof UndoCommand) {
+			((UndoCommand) command).setField(field);
 		}
 
 		command.setCharacter(this);

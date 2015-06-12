@@ -2,12 +2,19 @@ package engine.concrete;
 
 import elements.abstracts.characters.CapturingEnemy;
 import elements.abstracts.characters.Enemy;
+import engine.helpers.FieldCaretaker;
 import engine.helpers.Logger;
 
 public class Engine {
 
 	private static Engine instance = new Engine();
 	private static boolean gameOver;
+	private boolean fieldUndone;
+	private Field field;
+
+	public void setFieldUndone() {
+		this.fieldUndone = true;
+	}
 
 	private Engine() {
 	};
@@ -21,19 +28,25 @@ public class Engine {
 	}
 
 	public void start(Field field) {
+		this.field = field;
+		FieldCaretaker.getInstance().saveField(this.field);
 		while (!gameOver) {
 			Logger.getInstance().promptUser();
-			field.getHero().takeTurn(field);
-			field.removeDeadEnemies();
-			this.checkForWin(field);
+			this.field.getHero().takeTurn(this.field);
+			this.field.removeDeadEnemies();
+			this.checkForWin(this.field);
 
-			for (Enemy enemy : field.getEnemies()) {
-				enemy.takeTurn(field);
+			if (!this.fieldUndone) {
+				for (Enemy enemy : this.field.getEnemies()) {
+					enemy.takeTurn(this.field);
+				}
+
+				this.checkForLoss(this.field);
+				FieldCaretaker.getInstance().saveField(this.field);
+			} else {
+				fieldUndone = false;
 			}
-
-			this.checkForLoss(field);
-
-			Logger.getInstance().printMessage(field.toString());
+			Logger.getInstance().printMessage(this.field.toString());
 		}
 	}
 
@@ -55,6 +68,26 @@ public class Engine {
 		if (field.getHero().getHealthPoints() == 0) {
 			Logger.getInstance().printMessage("You lost!");
 			Engine.getInstance().gameOver();
+		}
+	}
+
+	public FieldMemento saveField() {
+		return new FieldMemento(this.field);
+	}
+
+	public void restoreField(FieldMemento memento) {
+		this.field = new Field(memento.getField());
+	}
+
+	public static class FieldMemento {
+		private Field field;
+
+		private FieldMemento(Field field) {
+			this.field = new Field(field);
+		}
+
+		private Field getField() {
+			return this.field;
 		}
 	}
 

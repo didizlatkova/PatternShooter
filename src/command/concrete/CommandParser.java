@@ -42,6 +42,8 @@ public class CommandParser {
 			return new DownCommand();
 		case "attack":
 			return new AttackCommand();
+		case "undo":
+			return new UndoCommand();
 
 		default:
 			Logger.getInstance().printMessage("Invalid command!");

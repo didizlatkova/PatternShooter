@@ -1,7 +1,6 @@
 package engine.concrete;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import elements.abstracts.*;
@@ -49,12 +48,38 @@ public class Field {
 		}
 	}
 
+	public Field() {
+	};
+
 	public Field(int width, int height, ZoneFactory factory) {
 		this.generator = RandomGenerator.getInstance();
 		this.enemies = factory.createEnemies();
 		this.hero = factory.createHero();
 		this.items = factory.createItems();
 		this.setElements(height, width);
+	}
+
+	public Field(Field field) {
+		this.elements = new FieldElement[field.elements.length][field.elements[0].length];
+		for (int i = 0; i < field.elements.length; i++) {
+			for (int j = 0; j < field.elements[0].length; j++) {
+				this.elements[i][j] = field.elements[i][j];
+			}
+		}
+
+		this.enemies = new ArrayList<Enemy>();
+		for (int i = 0; i < field.enemies.size(); i++) {
+			this.enemies.add(field.enemies.get(i));
+		}
+
+		this.hero = field.hero;
+
+		this.items = new ArrayList<Item>();
+		for (int i = 0; i < field.items.size(); i++) {
+			this.items.add(field.items.get(i));
+		}
+
+		this.generator = field.generator;
 	}
 
 	public void moveCharacter(Character character, Position newPosition) {
@@ -115,28 +140,6 @@ public class Field {
 		}
 
 		return sb.toString();
-	}
-
-	public FieldMemento saveOptions() {
-		return new FieldMemento(this.elements);
-	}
-
-	public void restoreOptions(FieldMemento memento) {
-		this.elements = Arrays.copyOf(memento.getFieldElements(),
-				memento.getFieldElements().length);
-	}
-
-	public static class FieldMemento {
-		private FieldElement[][] fieldElements;
-
-		private FieldMemento(FieldElement[][] fieldElements) {
-			this.fieldElements = Arrays.copyOf(fieldElements,
-					fieldElements.length);
-		}
-
-		private FieldElement[][] getFieldElements() {
-			return this.fieldElements;
-		}
 	}
 
 }
