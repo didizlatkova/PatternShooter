@@ -1,0 +1,29 @@
+You are in the Underwater Zone!
+
+Allowed commands:
+left
+right
+up
+down
+attack
+equipt <tool>
+use <weapon>
+
+Characters:
+    Hero (H) - Blast
+    Dumbfishead (D) - Net
+    Sharker (S) - Depth bomb
+    Whalesknighter (W) - Harpoon
+    Amphibianshipswrecker (AS) - Torpedo
+
+
+Weapons and tools:
+    Blast (Bl) - has damage 20
+    Watergun (WG) - fires continuously and has damage 40
+    Net (N) - captures hero an he cannot attack
+    Harpoon (H) - has damage 10
+    Depth bomb (DB) - has damage 30 and affects all enemies around it
+    Torpedo (T) - has damage 50
+    Armor (A) - protects hero from damage and minimizes it by half
+    BreathMask (BM) - neutralizes Depth bomb
+    Underwaterscooter (US) - neutralizes Torpedo

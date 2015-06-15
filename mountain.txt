@@ -23,6 +23,6 @@ Weapons and tools:
     Machine Gun (M) - fires continuously and has damage 40
     Rocket (R) - has damage 10 and affects all enemies around it
     Pickax (P) - has damage 6
-    Rope (R) - combined with Karabiner can capture the hero and he cannot attack his next turn
+    Rope (R) - combined with Karabiner can capture the hero and he cannot attack
     Karabiner (K)
     Armor (A) - protects hero from damage and minimizes it by half
