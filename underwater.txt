@@ -10,9 +10,9 @@ equipt <tool>
 use <weapon>
 
 Characters:
-    Hero (H) - Blast
+    Hero (H) - Watergun
     Dumbfishead (D) - Net
-    Sharker (S) - Depth bomb
+    Sharker (S) - Blast
     Whalesknighter (W) - Harpoon
     Amphibianshipswrecker (AS) - Torpedo
 

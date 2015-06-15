@@ -1,7 +1,5 @@
 package zones.mountain.characters;
 
-import strategy.abstracts.AttackStrategy;
-import strategy.concrete.CaptureAttackStrategy;
 import elements.abstracts.characters.CapturingEnemy;
 import elements.abstracts.weapons.Weapon;
 import engine.helpers.Logger;
@@ -22,11 +20,6 @@ public class BigHook extends CapturingEnemy {
 	@Override
 	public String getName() {
 		return "BigHook";
-	}
-
-	@Override
-	protected AttackStrategy getStrategy() {
-		return new CaptureAttackStrategy();
 	}
 
 	@Override

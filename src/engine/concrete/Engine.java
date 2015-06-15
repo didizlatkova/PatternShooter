@@ -1,9 +1,7 @@
 package engine.concrete;
 
-import elements.abstracts.characters.CapturingEnemy;
-import elements.abstracts.characters.Enemy;
-import engine.helpers.FieldCaretaker;
-import engine.helpers.Logger;
+import elements.abstracts.characters.*;
+import engine.helpers.*;
 
 public class Engine {
 

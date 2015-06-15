@@ -1,12 +1,13 @@
 package command.concrete;
 
+import command.abstracts.CharacterCommand;
 import command.abstracts.Command;
 import elements.abstracts.*;
 import elements.abstracts.characters.Character;
 import elements.concrete.Hero;
 import engine.helpers.Logger;
 
-public class EquiptCommand implements Command {
+public class EquiptCommand implements Command, CharacterCommand {
 
 	private Hero character;
 	private String toolName;

@@ -1,12 +1,12 @@
 package zones.underwater.characters;
 
-import zones.underwater.weapons.DepthBomb;
+import zones.common.weapons.Blast;
 import elements.abstracts.characters.Enemy;
 
 public class Sharker extends Enemy {
 
 	public Sharker(int healthPoints) {
-		super(new DepthBomb(), healthPoints);
+		super(new Blast(), healthPoints);
 	}
 	
 	@Override

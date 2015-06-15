@@ -1,5 +1,6 @@
 package command.concrete;
 
+import command.abstracts.CharacterCommand;
 import command.abstracts.Command;
 import elements.abstracts.Item;
 import elements.abstracts.characters.Character;
@@ -7,7 +8,7 @@ import elements.abstracts.weapons.Weapon;
 import elements.concrete.Hero;
 import engine.helpers.Logger;
 
-public class ChangeWeaponCommand implements Command {
+public class ChangeWeaponCommand implements Command, CharacterCommand {
 
 	private Hero character;
 	private String weaponName;
