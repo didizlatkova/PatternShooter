@@ -6,8 +6,9 @@ import engine.helpers.*;
 public class Engine {
 
 	private static Engine instance = new Engine();
-	private static boolean gameOver;
+	private boolean gameOver;
 	private boolean fieldUndone;
+	private boolean gameWon;
 	private Field field;
 
 	public void setFieldUndone() {
@@ -21,14 +22,24 @@ public class Engine {
 		return instance;
 	}
 
-	public void gameOver() {
-		gameOver = true;
+	public boolean gameWon() {
+		return this.gameWon;
+	}
+
+	public void gameOver(boolean gameWon) {
+		this.gameOver = true;
+		this.gameWon = gameWon;
+	}
+
+	public void newGame() {
+		this.gameOver = false;
+		this.gameWon = false;
 	}
 
 	public void start(Field field) {
 		this.field = field;
 		FieldCaretaker.getInstance().saveField(this.field);
-		while (!gameOver) {
+		while (!this.gameOver) {
 			Logger.getInstance().promptUser();
 			this.field.getHero().takeTurn(this.field);
 			this.field.removeDeadEnemies();
@@ -51,21 +62,22 @@ public class Engine {
 	private void checkForWin(Field field) {
 		if (field.getEnemies().isEmpty()) {
 			Logger.getInstance().printMessage("You win!");
-			Engine.getInstance().gameOver();
+			Engine.getInstance().gameOver(true);
 		} else if (field.getEnemies().size() == 1
 				&& field.getEnemies().get(0) instanceof CapturingEnemy) {
 			Logger.getInstance().printMessage(
 					String.format(
 							"%s got lonely and committed suicide! You win!",
 							field.getEnemies().get(0).getName()));
-			Engine.getInstance().gameOver();
+			field.removeSuicidalEnemy();
+			Engine.getInstance().gameOver(true);
 		}
 	}
 
 	private void checkForLoss(Field field) {
 		if (field.getHero().getHealthPoints() == 0) {
 			Logger.getInstance().printMessage("You lost!");
-			Engine.getInstance().gameOver();
+			Engine.getInstance().gameOver(false);
 		}
 	}
 

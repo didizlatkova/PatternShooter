@@ -13,7 +13,7 @@ Characters:
     Hero (H) - Watergun
     Dumbfishead (D) - Net
     Sharker (S) - Blast
-    Whalesknighter (W) - Harpoon
+    Whalesknighter (WK) - Harpoon
     Amphibianshipswrecker (AS) - Torpedo
 
 

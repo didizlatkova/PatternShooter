@@ -15,7 +15,7 @@ public class DepthBomb extends MultipleDamageWeapon {
 
 	@Override
 	public String getName() {
-		return "Depth bomb";
+		return "DepthBomb";
 	}
 
 }

@@ -55,7 +55,7 @@ public class CommandParser {
 		return scanner;
 	}
 
-	public void close() {
+	public void closeScanner() {
 		scanner.close();
 	}
 }

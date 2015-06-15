@@ -113,6 +113,10 @@ public class Field {
 				"Enemies left: " + this.enemies.size());
 	}
 
+	public void removeSuicidalEnemy() {
+		this.enemies.remove(0);
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
