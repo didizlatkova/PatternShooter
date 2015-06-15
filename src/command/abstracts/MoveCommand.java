@@ -8,7 +8,7 @@ import elements.concrete.*;
 import engine.concrete.Field;
 import engine.helpers.Logger;
 
-public abstract class MoveCommand implements Command {
+public abstract class MoveCommand implements Command, CharacterCommand, FieldCommand {
 
 	protected Field field;
 	private Character character;

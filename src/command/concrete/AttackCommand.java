@@ -1,10 +1,11 @@
 package command.concrete;
 
 import strategy.abstracts.AttackStrategy;
+import command.abstracts.CharacterCommand;
 import command.abstracts.Command;
 import elements.abstracts.characters.Character;
 
-public class AttackCommand implements Command {
+public class AttackCommand implements Command, CharacterCommand {
 
 	private AttackStrategy strategy;
 	protected Character character;

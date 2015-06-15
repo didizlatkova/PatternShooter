@@ -1,23 +1,15 @@
 package command.concrete;
 
-import command.abstracts.Command;
-import elements.abstracts.characters.Character;
-import engine.concrete.Engine;
-import engine.concrete.Field;
-import engine.helpers.FieldCaretaker;
-import engine.helpers.Logger;
+import command.abstracts.*;
+import engine.concrete.*;
+import engine.helpers.*;
 
-public class UndoCommand implements Command {
+public class UndoCommand implements Command, FieldCommand {
 
 	private Field field;
 
 	public void setField(Field field) {
 		this.field = field;
-	}
-
-	@Override
-	public void setCharacter(Character character) {
-		// not needed
 	}
 
 	@Override
