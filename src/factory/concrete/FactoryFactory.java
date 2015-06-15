@@ -16,7 +16,7 @@ import factory.abstracts.ZoneFactory;
 public class FactoryFactory implements ZoneFactory {
 
 	private static final int HERO_HEALTH_POINTS = 200;
-	private static final int ENEMY_HEALTH_POINTS = 60;
+	private static final int ENEMY_HEALTH_POINTS = 100;
 	private static final String RULES_PATH = "factory.txt";
 
 	@Override

@@ -15,7 +15,7 @@ import factory.abstracts.ZoneFactory;
 
 public class UnderwaterFactory implements ZoneFactory {
 
-	private static final int HERO_HEALTH_POINTS = 150;
+	private static final int HERO_HEALTH_POINTS = 100;
 	private static final int ENEMY_HEALTH_POINTS = 100;
 	private static final String RULES_PATH = "underwater.txt";
 
