@@ -1,9 +1,9 @@
 package proxy.concrete;
 
 import command.abstracts.Command;
-import command.concrete.CommandParser;
 import elements.concrete.Hero;
 import engine.concrete.Field;
+import engine.helpers.CommandParser;
 import proxy.abstracts.TurnManager;
 
 public class HeroTurnManager implements TurnManager {

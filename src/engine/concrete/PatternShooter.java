@@ -3,7 +3,7 @@ package engine.concrete;
 import java.util.ArrayList;
 import java.util.List;
 
-import command.concrete.CommandParser;
+import engine.helpers.CommandParser;
 import engine.helpers.Logger;
 import factory.abstracts.ZoneFactory;
 import factory.concrete.*;

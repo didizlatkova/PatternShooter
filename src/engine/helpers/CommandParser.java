@@ -1,9 +1,16 @@
-package command.concrete;
+package engine.helpers;
 
 import java.util.Scanner;
 
 import command.abstracts.Command;
-import engine.helpers.Logger;
+import command.concrete.AttackCommand;
+import command.concrete.ChangeWeaponCommand;
+import command.concrete.DownCommand;
+import command.concrete.EquiptCommand;
+import command.concrete.LeftCommand;
+import command.concrete.RightCommand;
+import command.concrete.UndoCommand;
+import command.concrete.UpCommand;
 
 public class CommandParser {
 

@@ -1,10 +1,10 @@
 package proxy.concrete;
 
 import command.concrete.AttackCommand;
-import command.concrete.CommandParser;
 import elements.abstracts.weapons.ContinuousDamageWeapon;
 import elements.concrete.Hero;
 import engine.concrete.Field;
+import engine.helpers.CommandParser;
 import engine.helpers.Logger;
 import proxy.abstracts.TurnManager;
 

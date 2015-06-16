@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.8" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <interface id="1" language="java" name="command.abstracts.CharacterCommand" project="PatternShooter" 
+    file="/PatternShooter/src/command/abstracts/CharacterCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="141" x="2140" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </interface>  
+  <interface id="2" language="java" name="command.abstracts.Command" project="PatternShooter" 
+    file="/PatternShooter/src/command/abstracts/Command.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="101" x="1999" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </interface>  
+  <interface id="3" language="java" name="command.abstracts.FieldCommand" project="PatternShooter" 
+    file="/PatternShooter/src/command/abstracts/FieldCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="110" x="1335" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="command.abstracts.MoveCommand" project="PatternShooter" 
+    file="/PatternShooter/src/command/abstracts/MoveCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="114" x="888" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="command.concrete.AttackCommand" project="PatternShooter" 
+    file="/PatternShooter/src/command/concrete/AttackCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="121" x="1995" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="command.concrete.ChangeWeaponCommand" project="PatternShooter" 
+    file="/PatternShooter/src/command/concrete/ChangeWeaponCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2146" y="355"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="command.concrete.DownCommand" project="PatternShooter" 
+    file="/PatternShooter/src/command/concrete/DownCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="115" x="539" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="command.concrete.EquiptCommand" project="PatternShooter" 
+    file="/PatternShooter/src/command/concrete/EquiptCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="119" x="2156" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="command.concrete.LeftCommand" project="PatternShooter" 
+    file="/PatternShooter/src/command/concrete/LeftCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="105" x="875" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="command.concrete.RightCommand" project="PatternShooter" 
+    file="/PatternShooter/src/command/concrete/RightCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="113" x="1020" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="command.concrete.UndoCommand" project="PatternShooter" 
+    file="/PatternShooter/src/command/concrete/UndoCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="113" x="1842" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="command.concrete.UpCommand" project="PatternShooter" 
+    file="/PatternShooter/src/command/concrete/UpCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="99" x="694" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <interface id="13" language="java" name="elements.abstracts.FieldElement" project="PatternShooter" 
+    file="/PatternShooter/src/elements/abstracts/FieldElement.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="101" x="1112" y="421"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </interface>  
+  <class id="14" language="java" name="elements.abstracts.Item" project="PatternShooter" 
+    file="/PatternShooter/src/elements/abstracts/Item.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="90" x="1253" y="320"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="elements.abstracts.Position" project="PatternShooter" 
+    file="/PatternShooter/src/elements/abstracts/Position.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="90" x="835" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="elements.abstracts.Tool" project="PatternShooter" 
+    file="/PatternShooter/src/elements/abstracts/Tool.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="90" x="1889" y="421"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="elements.abstracts.characters.CapturingEnemy" project="PatternShooter" 
+    file="/PatternShooter/src/elements/abstracts/characters/CapturingEnemy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2100" y="850"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="elements.abstracts.characters.Character" project="PatternShooter" 
+    file="/PatternShooter/src/elements/abstracts/characters/Character.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="137" x="1485" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="elements.abstracts.characters.Enemy" project="PatternShooter" 
+    file="/PatternShooter/src/elements/abstracts/characters/Enemy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1495" y="686"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="elements.abstracts.weapons.ContinuousDamageWeapon" project="PatternShooter" 
+    file="/PatternShooter/src/elements/abstracts/weapons/ContinuousDamageWeapon.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="611" y="563"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="elements.abstracts.weapons.MultipleDamageWeapon" project="PatternShooter" 
+    file="/PatternShooter/src/elements/abstracts/weapons/MultipleDamageWeapon.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="162" x="741" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="elements.abstracts.weapons.Weapon" project="PatternShooter" 
+    file="/PatternShooter/src/elements/abstracts/weapons/Weapon.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="130" x="1253" y="421"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="elements.concrete.Hero" project="PatternShooter" 
+    file="/PatternShooter/src/elements/concrete/Hero.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="87" x="1889" y="320"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="engine.concrete.Engine" project="PatternShooter" 
+    file="/PatternShooter/src/engine/concrete/Engine.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="85" x="1548" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="engine.concrete.Engine.FieldMemento" project="PatternShooter" 
+    file="/PatternShooter/src/engine/concrete/Engine.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="104" x="1683" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="engine.concrete.Field" project="PatternShooter" 
+    file="/PatternShooter/src/engine/concrete/Field.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="85" x="1643" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="engine.concrete.PatternShooter" project="PatternShooter" 
+    file="/PatternShooter/src/engine/concrete/PatternShooter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="591" y="436"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="engine.helpers.CommandParser" project="PatternShooter" 
+    file="/PatternShooter/src/engine/helpers/CommandParser.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="590" y="346"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="engine.helpers.FieldCaretaker" project="PatternShooter" 
+    file="/PatternShooter/src/engine/helpers/FieldCaretaker.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="109" x="1683" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="engine.helpers.Logger" project="PatternShooter" 
+    file="/PatternShooter/src/engine/helpers/Logger.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="577" y="258"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="engine.helpers.RandomGenerator" project="PatternShooter" 
+    file="/PatternShooter/src/engine/helpers/RandomGenerator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1669" y="686"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <enumeration id="32" language="java" name="engine.helpers.ToolType" project="PatternShooter" 
+    file="/PatternShooter/src/engine/helpers/ToolType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="120" x="681" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </enumeration>  
+  <interface id="33" language="java" name="factory.abstracts.ZoneFactory" project="PatternShooter" 
+    file="/PatternShooter/src/factory/abstracts/ZoneFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="101" x="1194" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </interface>  
+  <class id="34" language="java" name="factory.concrete.FactoryFactory" project="PatternShooter" 
+    file="/PatternShooter/src/factory/concrete/FactoryFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="112" x="1042" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="factory.concrete.MountainFactory" project="PatternShooter" 
+    file="/PatternShooter/src/factory/concrete/MountainFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="120" x="1194" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="factory.concrete.UnderwaterFactory" project="PatternShooter" 
+    file="/PatternShooter/src/factory/concrete/UnderwaterFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="135" x="1354" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <interface id="37" language="java" name="proxy.abstracts.TurnManager" project="PatternShooter" 
+    file="/PatternShooter/src/proxy/abstracts/TurnManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="101" x="810" y="421"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </interface>  
+  <class id="38" language="java" name="proxy.concrete.HeroTurnManager" project="PatternShooter" 
+    file="/PatternShooter/src/proxy/concrete/HeroTurnManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="127" x="662" y="320"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="proxy.concrete.TurnManagerProxy" project="PatternShooter" 
+    file="/PatternShooter/src/proxy/concrete/TurnManagerProxy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="133" x="662" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="strategy.abstracts.AttackStrategy" project="PatternShooter" 
+    file="/PatternShooter/src/strategy/abstracts/AttackStrategy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="111" x="1848" y="138"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="strategy.concrete.CaptureAttackStrategy" project="PatternShooter" 
+    file="/PatternShooter/src/strategy/concrete/CaptureAttackStrategy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="157" x="2138" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="strategy.concrete.EnemyAttackStrategy" project="PatternShooter" 
+    file="/PatternShooter/src/strategy/concrete/EnemyAttackStrategy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="151" x="1947" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="43" language="java" name="strategy.concrete.HeroAttackStrategy" project="PatternShooter" 
+    file="/PatternShooter/src/strategy/concrete/HeroAttackStrategy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="139" x="1768" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <interface id="44" language="java" name="visitor.abstracts.Visitor" project="PatternShooter" 
+    file="/PatternShooter/src/visitor/abstracts/Visitor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="101" x="1361" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </interface>  
+  <class id="45" language="java" name="visitor.concrete.EnemyVisitor" project="PatternShooter" 
+    file="/PatternShooter/src/visitor/concrete/EnemyVisitor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="101" x="1502" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="46" language="java" name="visitor.concrete.HeroVisitor" project="PatternShooter" 
+    file="/PatternShooter/src/visitor/concrete/HeroVisitor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="89" x="1232" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="zones.common.tools.Armor" project="PatternShooter" 
+    file="/PatternShooter/src/zones/common/tools/Armor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2027" y="615"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="zones.common.weapons.Blast" project="PatternShooter" 
+    file="/PatternShooter/src/zones/common/weapons/Blast.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="114" x="1253" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="49" language="java" name="zones.common.weapons.Bomb" project="PatternShooter" 
+    file="/PatternShooter/src/zones/common/weapons/Bomb.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1319" y="648"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="50" language="java" name="zones.common.weapons.Gun" project="PatternShooter" 
+    file="/PatternShooter/src/zones/common/weapons/Gun.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="114" x="1099" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="51" language="java" name="zones.common.weapons.MachineGun" project="PatternShooter" 
+    file="/PatternShooter/src/zones/common/weapons/MachineGun.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="858" y="668"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="52" language="java" name="zones.factory.characters.Gorgonel" project="PatternShooter" 
+    file="/PatternShooter/src/zones/factory/characters/Gorgonel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1982" y="718"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="zones.factory.characters.Plasmodium" project="PatternShooter" 
+    file="/PatternShooter/src/zones/factory/characters/Plasmodium.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2123" y="679"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="54" language="java" name="zones.factory.characters.Slimeman" project="PatternShooter" 
+    file="/PatternShooter/src/zones/factory/characters/Slimeman.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1090" y="787"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="55" language="java" name="zones.factory.characters.Sulfurhead" project="PatternShooter" 
+    file="/PatternShooter/src/zones/factory/characters/Sulfurhead.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="937" y="787"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="56" language="java" name="zones.factory.tools.GasMask" project="PatternShooter" 
+    file="/PatternShooter/src/zones/factory/tools/GasMask.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1924" y="616"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="57" language="java" name="zones.factory.tools.GlycerinBalls" project="PatternShooter" 
+    file="/PatternShooter/src/zones/factory/tools/GlycerinBalls.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2056" y="541"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="58" language="java" name="zones.factory.weapons.ChemicalMachineGun" project="PatternShooter" 
+    file="/PatternShooter/src/zones/factory/weapons/ChemicalMachineGun.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="601" y="494"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="59" language="java" name="zones.factory.weapons.CocktailMolotov" project="PatternShooter" 
+    file="/PatternShooter/src/zones/factory/weapons/CocktailMolotov.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="116" x="943" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="60" language="java" name="zones.mountain.characters.Baronom" project="PatternShooter" 
+    file="/PatternShooter/src/zones/mountain/characters/Baronom.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1248" y="787"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="61" language="java" name="zones.mountain.characters.BigHook" project="PatternShooter" 
+    file="/PatternShooter/src/zones/mountain/characters/BigHook.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1931" y="880"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="62" language="java" name="zones.mountain.characters.Icelander" project="PatternShooter" 
+    file="/PatternShooter/src/zones/mountain/characters/Icelander.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1954" y="787"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="63" language="java" name="zones.mountain.characters.MountainEvil" project="PatternShooter" 
+    file="/PatternShooter/src/zones/mountain/characters/MountainEvil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2117" y="787"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="64" language="java" name="zones.mountain.weapons.Karabiner" project="PatternShooter" 
+    file="/PatternShooter/src/zones/mountain/weapons/Karabiner.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="711" y="758"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="65" language="java" name="zones.mountain.weapons.Pickax" project="PatternShooter" 
+    file="/PatternShooter/src/zones/mountain/weapons/Pickax.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="570" y="754"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="66" language="java" name="zones.mountain.weapons.Rocket" project="PatternShooter" 
+    file="/PatternShooter/src/zones/mountain/weapons/Rocket.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1168" y="665"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="67" language="java" name="zones.mountain.weapons.Rope" project="PatternShooter" 
+    file="/PatternShooter/src/zones/mountain/weapons/Rope.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="116" x="1733" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="68" language="java" name="zones.underwater.characters.Amphibianshipswrecker" project="PatternShooter" 
+    file="/PatternShooter/src/zones/underwater/characters/Amphibianshipswrecker.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1431" y="787"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="69" language="java" name="zones.underwater.characters.Dumbfishead" project="PatternShooter" 
+    file="/PatternShooter/src/zones/underwater/characters/Dumbfishead.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2103" y="923"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="70" language="java" name="zones.underwater.characters.Whalesknighter" project="PatternShooter" 
+    file="/PatternShooter/src/zones/underwater/characters/Whalesknighter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1788" y="787"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="71" language="java" name="zones.underwater.characters.Sharker" project="PatternShooter" 
+    file="/PatternShooter/src/zones/underwater/characters/Sharker.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1618" y="787"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="72" language="java" name="zones.underwater.tools.BreathMask" project="PatternShooter" 
+    file="/PatternShooter/src/zones/underwater/tools/BreathMask.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="106" x="1889" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="73" language="java" name="zones.underwater.tools.Underwaterscooter" project="PatternShooter" 
+    file="/PatternShooter/src/zones/underwater/tools/Underwaterscooter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1798" y="619"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="74" language="java" name="zones.underwater.weapons.DepthBomb" project="PatternShooter" 
+    file="/PatternShooter/src/zones/underwater/weapons/DepthBomb.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1015" y="668"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="75" language="java" name="zones.underwater.weapons.Harpoon" project="PatternShooter" 
+    file="/PatternShooter/src/zones/underwater/weapons/Harpoon.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="699" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="76" language="java" name="zones.underwater.weapons.Net" project="PatternShooter" 
+    file="/PatternShooter/src/zones/underwater/weapons/Net.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="123" x="1570" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="77" language="java" name="zones.underwater.weapons.Torpedo" project="PatternShooter" 
+    file="/PatternShooter/src/zones/underwater/weapons/Torpedo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="51" width="123" x="1407" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="78" language="java" name="zones.underwater.weapons.Watergun" project="PatternShooter" 
+    file="/PatternShooter/src/zones/underwater/weapons/Watergun.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="555" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <association id="79">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="80" name="items"/>      
+      <multiplicity id="81" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="82">    
+    <end type="SOURCE" refId="71"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <generalization id="83">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="46"/>  
+  </generalization>  
+  <generalization id="84">    
+    <end type="SOURCE" refId="78"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <realization id="85">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <generalization id="86">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="40"/>  
+  </generalization>  
+  <generalization id="87">    
+    <end type="SOURCE" refId="63"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <realization id="88">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="89">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="90" name="instance"/>      
+      <multiplicity id="91" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="92">    
+    <end type="SOURCE" refId="64"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <association id="93">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="94" name="instance"/>      
+      <multiplicity id="95" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="96">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="97" name="position"/>      
+      <multiplicity id="98" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="99">    
+    <end type="SOURCE" refId="76"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <generalization id="100">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <association id="101">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="102" name="toolsInUse"/>      
+      <multiplicity id="103" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="104">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="25"/>  
+  </nesting>  
+  <generalization id="105">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <realization id="106">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="107">    
+    <bendpoint x="1652" y="138"/>    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="108" name="field"/>      
+      <multiplicity id="109" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="110">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <generalization id="111">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="112">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="40"/>  
+  </generalization>  
+  <association id="113">    
+    <bendpoint x="2325" y="138"/>    
+    <bendpoint x="2325" y="229"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="114" name="character"/>      
+      <multiplicity id="115" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="116">    
+    <end type="SOURCE" refId="67"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <association id="117">    
+    <bendpoint x="844" y="138"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="118" name="newPosition"/>      
+      <multiplicity id="119" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="120">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <realization id="121">    
+    <bendpoint x="819" y="320"/>    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="37"/>  
+  </realization>  
+  <realization id="122">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="37"/>  
+  </realization>  
+  <generalization id="123">    
+    <end type="SOURCE" refId="74"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <generalization id="124">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <generalization id="125">    
+    <end type="SOURCE" refId="65"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <generalization id="126">    
+    <end type="SOURCE" refId="66"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <generalization id="127">    
+    <end type="SOURCE" refId="59"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <realization id="128">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <generalization id="129">    
+    <end type="SOURCE" refId="45"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <association id="130">    
+    <bendpoint x="2346" y="138"/>    
+    <bendpoint x="2346" y="229"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="131" name="character"/>      
+      <multiplicity id="132" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="133">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="134" name="handler"/>      
+      <multiplicity id="135" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="136">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="137">    
+    <bendpoint x="1163" y="138"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="138" name="field"/>      
+      <multiplicity id="139" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="140">    
+    <end type="SOURCE" refId="62"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <realization id="141">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <generalization id="142">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="14"/>  
+  </generalization>  
+  <association id="143">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="144" name="instance"/>      
+      <multiplicity id="145" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="146">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <generalization id="147">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="40"/>  
+  </generalization>  
+  <association id="148">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="149" name="generator"/>      
+      <multiplicity id="150" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="151">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="152" name="currentField"/>      
+      <multiplicity id="153" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="154">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="155">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="156">    
+    <end type="SOURCE" refId="61"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <generalization id="157">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <realization id="158">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <association id="159">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="160" name="enemies"/>      
+      <multiplicity id="161" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="162">    
+    <bendpoint x="823" y="138"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="163" name="currentPosition"/>      
+      <multiplicity id="164" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="165">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="14"/>  
+  </generalization>  
+  <association id="166">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="167" name="character"/>      
+      <multiplicity id="168" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="169">    
+    <end type="SOURCE" refId="73"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="170">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <realization id="171">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <association id="172">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="173" name="realManager"/>      
+      <multiplicity id="174" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="175">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <generalization id="176">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="177">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <generalization id="178">    
+    <end type="SOURCE" refId="77"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <association id="179">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="180" name="strategy"/>      
+      <multiplicity id="181" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="182">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="44"/>  
+  </realization>  
+  <realization id="183">    
+    <bendpoint x="1180" y="229"/>    
+    <bendpoint x="1180" y="320"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="184">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="185">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="186" name="turnManager"/>      
+      <multiplicity id="187" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="37" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="188">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <generalization id="189">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <realization id="190">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <generalization id="191">    
+    <end type="SOURCE" refId="55"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <generalization id="192">    
+    <end type="SOURCE" refId="70"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <generalization id="193">    
+    <end type="SOURCE" refId="72"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <realization id="194">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <association id="195">    
+    <end type="SOURCE" refId="46" navigable="false">      
+      <attribute id="196" name="toolbox"/>      
+      <multiplicity id="197" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="198">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="199" name="mementos"/>      
+      <multiplicity id="200" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="201">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="202" name="field"/>      
+      <multiplicity id="203" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="204">    
+    <bendpoint x="1201" y="229"/>    
+    <bendpoint x="1201" y="320"/>    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="205" name="weapon"/>      
+      <multiplicity id="206" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="207">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <association id="208">    
+    <bendpoint x="1817" y="138"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="209" name="field"/>      
+      <multiplicity id="210" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="211">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="212" name="instance"/>      
+      <multiplicity id="213" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="214">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="215" name="character"/>      
+      <multiplicity id="216" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="217">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="218" name="hero"/>      
+      <multiplicity id="219" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="220">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="221" name="instance"/>      
+      <multiplicity id="222" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="223">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <association id="224">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="225" name="field"/>      
+      <multiplicity id="226" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="227">    
+    <end type="SOURCE" refId="75"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <generalization id="228">    
+    <end type="SOURCE" refId="68"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <generalization id="229">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="230">    
+    <end type="SOURCE" refId="60"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <generalization id="231">    
+    <end type="SOURCE" refId="53"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <realization id="232">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <generalization id="233">    
+    <end type="SOURCE" refId="56"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="234">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="45"/>  
+  </generalization>  
+  <generalization id="235">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <association id="236">    
+    <bendpoint x="1222" y="320"/>    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="237" name="elements"/>      
+      <multiplicity id="238" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="239">    
+    <end type="SOURCE" refId="51"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="false" static="false"/>    
+    <operations public="false" package="false" protected="false" private="false" static="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
